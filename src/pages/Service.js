@@ -1,5 +1,5 @@
 
-import '../serv.css';
+import '../pages/serv.css';
 function Service() {
   return (
     <div className='services'>

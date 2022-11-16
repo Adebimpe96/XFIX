@@ -87,3 +87,35 @@ export const link2 = [
     text: 'support',
   },
 ];
+export const routes=[
+  {
+    id: 1,
+    url:'/',
+    text: 'Dashboard'
+  },
+  {
+    id: 2,
+    url:'/',
+    text: 'Jobs'
+  },
+  {
+    id: 3,
+    url:'/',
+    text: 'Appointments'
+  },
+  {
+    id: 4,
+    url:'/',
+    text: 'History'
+  },
+  {
+    id: 5,
+    url:'/',
+    text: 'Support'
+  },
+  {
+    id: 6,
+    url:'/',
+    text: 'FAQ'
+  },
+]

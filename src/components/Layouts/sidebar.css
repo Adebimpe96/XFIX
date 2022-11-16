@@ -1,0 +1,22 @@
+.sidemain{
+height: 600px;
+width: 200px;
+
+/* border: 1px solid red; */
+}
+.sidebar-content{
+  width: 100%;
+  margin-left: 50px;
+}
+
+ 
+ .active li{
+  border-right: 6px solid darkblue;
+  width: 100%;
+
+ }
+ 
+  .logout{
+    margin-right: 100px;
+    padding: 50px;
+  }

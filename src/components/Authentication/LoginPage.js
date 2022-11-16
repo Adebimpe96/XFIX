@@ -1,7 +1,6 @@
 
 import { Link } from 'react-router-dom';
 import '../Authentication/side.css';
-// import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import Login from './Login';
 // import back from './image/art.jpg';
 
