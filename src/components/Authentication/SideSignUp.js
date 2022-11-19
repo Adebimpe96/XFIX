@@ -1,38 +1,40 @@
 // import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-
+import { useState } from "react";
 const Signups = () => {
-  // const [fullname, setFullName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [confirmpassword, setConfirmpassword] = useState("");
-  // const [address, setAddress] = useState("");
-  // const [phoneno, setPhoneNo] = useState("");
-  // const [city, setCity] = useState("");
-  // const [error, setError] = useState("");
-  const onSubmit = (data) => {
-    console.log(data);
+  const [fullname, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmpassword] = useState("");
+  const [address, setAddress] = useState("");
+  const [phoneno, setPhoneNo] = useState("");
+  const [city, setCity] = useState("");
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(
+      fullname,
+      email,
+      password,
+      confirmpassword,
+      address,
+      phoneno,
+      city
+    );
+    setError(false);
     navigate("/login");
   };
-  const navigate = useNavigate;
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
   return (
     <>
       <div className="form block shadow-sm">
         <h2 className="text-blue-800">Welcome to Xfix!</h2>
         <p className="text-sky-500 mt-2">Create an account with xfix.</p>
-        <form
-          action=""
-          method="post"
-          className=""
-          onSubmit={handleSubmit(onSubmit)}
-        >
+        <form action="" method="post" className="" onSubmit={handleSubmit}>
           <label htmlFor="name" className="">
             Full Name
           </label>
@@ -41,13 +43,9 @@ const Signups = () => {
             name="fullname"
             id="fullname"
             className="form-input"
-            {...register("fullname", {
-              required: "please fill in your name",
-              maxLength: 30,
-            })}
-            // onChange={(e) => setFullName(e.target.value)}
+            onChange={(e) => setFullName(e.target.value)}
           />
-          <p className="errors">{errors.fullname?.message}</p>
+          <p className="errors">{error}</p>
           <label htmlFor="name" className="">
             Email
           </label>
@@ -56,13 +54,9 @@ const Signups = () => {
             name="email"
             id="email"
             className="form-input"
-            {...register("email", {
-              required: "please fill in your email",
-              maxLength: 30,
-            })}
-            // onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <p className="errors">{errors.email?.message}</p>
+          <p className="errors">{error.email?.message}</p>
           <label htmlFor="phone" className="">
             Phone number
           </label>
@@ -71,13 +65,9 @@ const Signups = () => {
             name="number"
             id=""
             className="form-input"
-            {...register("number", {
-              required: "please input you phone number",
-              maxLength: 30,
-            })}
-            // onChange={(e) => setPhoneNo(e.target.value)}
+            onChange={(e) => setPhoneNo(e.target.value)}
           />
-          <p className="errors">{errors.number?.message}</p>
+          <p className="errors">{error.number?.message}</p>
           <label htmlFor="password" className="">
             Password
           </label>
@@ -86,10 +76,9 @@ const Signups = () => {
             name="password"
             id="password"
             className="form-input"
-            {...register("password", { required: true, maxLength: 30 })}
-            // onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
-          <p className="errors">{errors.password?.message}</p>
+          <p className="errors">{error.password?.message}</p>
           <label htmlFor="confirmpassword" className="">
             Confirm password
           </label>
@@ -98,10 +87,9 @@ const Signups = () => {
             name="confirmpassword"
             id="confirmpassword"
             className="form-input"
-            {...register("email", { required: true, maxLength: 30 })}
-            // onChange={(e) => setConfirmpassword(e.target.value)}
+            onChange={(e) => setConfirmpassword(e.target.value)}
           />
-          <p className="errors">{errors.confirmpassword?.message}</p>
+          <p className="errors">{error.confirmpassword?.message}</p>
           <label htmlFor="address" className="">
             House address
           </label>
@@ -110,23 +98,15 @@ const Signups = () => {
             name="address"
             id="address"
             className="form-input"
-            {...register("address", {
-              required: "please fill in your address",
-              maxLength: 30,
-            })}
-            // onChange={(e) => setAddress(e.target.value)}
+            onChange={(e) => setAddress(e.target.value)}
           />{" "}
-          <p className="errors">{errors.address?.message}</p>
+          <p className="errors">{error.address?.message}</p>
           <label htmlFor="city">Location</label>
           <select
             id="city"
             name="city"
             className="select-form"
-            {...register("city", {
-              required: "kindly select your area",
-              maxLength: 30,
-            })}
-            // onChange={(e) => setCity(e.target.value)}
+            onChange={(e) => setCity(e.target.value)}
           >
             <option value={""} className="hidden">
               Choose your area

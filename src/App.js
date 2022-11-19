@@ -17,13 +17,12 @@ import Template from "./components/Layouts/Template";
 import CustDashboard from "./pages/CustDashboard";
 import ArtDashboard from "./pages/ArtDashboard";
 import ArtisanSignUp from "./components/Authentication/ArtisanSignUp";
-import Workflow from "./pages/Workflow";
-import Request from "./pages/Card";
 import Dashboard from "./components/Layouts/Dashboard/Dashboard";
 import Jobs from "./components/Layouts/Jobs/Jobs";
 import Appointment from "./components/Layouts/Appointments/Appointment";
 import History from "./components/Layouts/History/History";
 import Support from "./components/Layouts/Support/Support";
+import Bodies from "./components/Bodies";
 
 function App() {
   return (
@@ -41,8 +40,8 @@ function App() {
           <Route path="artdashboard" element={<ArtDashboard />} />
           <Route path="sidebar" element={<Sidebar />} />
           <Route path="*" element={<Error />} />
-          <Route path="workflow" element={<Workflow />} />
-          <Route path="request" element={<Request />} />
+          <Route path="bodies" element={<Bodies />} />
+
           <Route path="template" element={<Template />} />
 
           {/* Template Children routes */}

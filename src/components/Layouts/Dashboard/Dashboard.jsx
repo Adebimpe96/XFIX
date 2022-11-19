@@ -1,4 +1,5 @@
 import '../Dashboard/dashboard.css';
+import { Link } from 'react-router-dom';
 import avatar from '../../Assets/image/avatar.png';
 import avatar1 from '../../Assets/image/avatar1.jpg';
 import avatar2 from '../../Assets/image/avatar3.jpg';
@@ -48,7 +49,7 @@ function Dashboard() {
     <div className='dashboard'>
         <div className="notification flex justify-end items-center">
         <i class="fa-regular fa-bell text-2xl text-slate-400 mt-4"></i>
-        <img src={avatar} alt="" className=" ml-3 avatar mt-4"/>
+       <Link to="/profile"> <img src={avatar} alt="" className=" ml-3 avatar mt-4"/></Link>
         </div>
 
         <div className="sub-container flex justify-between items-center">
@@ -60,6 +61,8 @@ function Dashboard() {
 
         <div className="cards flex justify-between items-center">
             <div className="card-content">
+                {/* <h3 className='text-blue-900'>No request yet</h3> */}
+                 <img src="" alt="" srcset="" />
             {requests.map((requests) => (
             <div key={requests.id} className="card mt-6 rounded-2xl flex justify-center">
                <div>
@@ -93,9 +96,9 @@ function Dashboard() {
                 <div className=''>
                     <p className='text-2xl a_name font-bold'>{appointments.name}</p>
                     <p className='text-blue-900 a_address'>{appointments.address}</p>
-                    {/* <div className='a_description mr-20'> 
-                    <p>Job Description:{appointments.description}</p>
-                </div> */}
+                    <div className='a_description mr-20'> 
+                    <p className='text-blue-900'>Job Description:{appointments.description}</p>
+                </div>
                     </div> 
                 </div>
                 </div>

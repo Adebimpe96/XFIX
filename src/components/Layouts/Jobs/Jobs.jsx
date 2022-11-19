@@ -1,7 +1,8 @@
 import '../Jobs/jobs.css';
-import { requests } from '../../data';
-import { NavLink, useNavigate } from 'react-router-dom';
-import {useState} from 'react';
+import emptyJob from '../../Assets/image/empty.jpg'
+// import requests from '../../data'
+import { useNavigate } from 'react-router-dom';
+
 function Jobs() {
   const navigate = useNavigate();
   const handleAccept=()=>{
@@ -13,18 +14,15 @@ const handleDecline=()=>{
   navigate("/jobs")
 };
   
-
-// const [request, setRequest] = useState([requests]);
-// const removeRequest = (id) => {
-//   const newRequests = requests.filter((request) => request.id !== id)
-//   setRequest(newRequests)
-// };
   return (
 
     <div className='jobs flex justify-center items-center'>
       <div className="job-container flex justify-between items-center">
         <div className="left-job h-full rounded-2xl">
-        {requests.map((requests) => (
+
+          <h3 className='text-blue-900'> No Jobs yet</h3>
+          <img src={emptyJob} alt="emptyjob" className='emptyjob'/>
+        {/* {requests.map((requests) => (
             <NavLink key={requests.id} className="mt-4 flex justify-center" to="#">
                <div className=''>
                 <img src={requests.image} alt={requests.name} className="request-img"/>
@@ -40,7 +38,7 @@ const handleDecline=()=>{
                 </div>
               
             </NavLink>
-          ))}
+          ))} */}
         </div>
         <div className="right-job  w-1/2  border-2 rounded-2xl">
           <div className="buttons flex justify-center items-center gap-4">
@@ -54,3 +52,4 @@ const handleDecline=()=>{
 };
 
 export default Jobs
+
