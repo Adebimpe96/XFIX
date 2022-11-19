@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../body.css";
 import LightSpeed from "react-awesome-reveal";
 import background from "../components/Assets/image/pictures.jpg";
@@ -14,9 +15,13 @@ function Body() {
                 <span className="text-red-500">quick fix</span> you need in your
                 home.
               </h3>
-              <div className="button flex ">
-                <button className="button_pry2">Hire a professional</button>
-                <button className="button_pry3">Get a job</button>
+              <div className="btn-link flex ">
+                <Link className="button_pry2 " to="/signup">
+                  Hire a professional
+                </Link>
+                <Link className="button_pry3" to="/artsignup">
+                  Get a job
+                </Link>
               </div>
             </div>
           </LightSpeed>

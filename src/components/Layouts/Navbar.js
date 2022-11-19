@@ -11,7 +11,7 @@ function Navbar() {
             Get started{" "}
           </Link>
           <Link to="/login">Login </Link>
-          <Link to="service">Services </Link>
+          <Link to="#service">Services </Link>
         </ul>
       </div>
     </div>
