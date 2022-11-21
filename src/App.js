@@ -22,6 +22,8 @@ import Appointment from "./components/Layouts/Appointments/Appointment";
 import History from "./components/Layouts/History/History";
 import Support from "./components/Layouts/Support/Support";
 import Bodies from "./components/Bodies";
+import Customers from "./components/Customers/Customer";
+import Confirm from "./components/Customers/Confirmation";
 
 function App() {
   return (
@@ -30,7 +32,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="body" element={<Body />} />
-
+          <Route path="booking" element={<Customers />} />
+          <Route path="confirm" element={<Confirm />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="artsignup" element={<ArtisanSignUp />} />
