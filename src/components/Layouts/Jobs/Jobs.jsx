@@ -1,7 +1,9 @@
 import '../Jobs/jobs.css';
-import emptyJob from '../../Assets/image/empty.jpg'
-// import requests from '../../data'
-import { useNavigate } from 'react-router-dom';
+// import avatar1 from '../../Assets/image/avatar1.jpg';
+// import avatar2 from '../../Assets/image/avatar3.jpg';
+// import emptyJob from '../../Assets/image/empty.jpg'
+import requests from '../../data';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function Jobs() {
   const navigate = useNavigate();
@@ -13,16 +15,16 @@ const handleDecline=()=>{
   alert("Job declined. See the next available job")
   navigate("/jobs")
 };
-  
+
   return (
 
     <div className='jobs flex justify-center items-center'>
       <div className="job-container flex justify-between items-center">
         <div className="left-job h-full rounded-2xl">
-
-          <h3 className='text-blue-900'> No Jobs yet</h3>
-          <img src={emptyJob} alt="emptyjob" className='emptyjob'/>
-        {/* {requests.map((requests) => (
+ 
+          {/* <h3 className='text-blue-900'> No Jobs yet</h3>
+          <img src={emptyJob} alt="emptyjob" className='emptyjob'/>  */}
+        {requests.map((requests) => (
             <NavLink key={requests.id} className="mt-4 flex justify-center" to="#">
                <div className=''>
                 <img src={requests.image} alt={requests.name} className="request-img"/>
@@ -38,7 +40,7 @@ const handleDecline=()=>{
                 </div>
               
             </NavLink>
-          ))} */}
+          ))}
         </div>
         <div className="right-job  w-1/2  border-2 rounded-2xl">
           <div className="buttons flex justify-center items-center gap-4">

@@ -1,0 +1,22 @@
+.a_containter{
+    position: relative;
+    width: 1728px;
+    height: 1338px;
+    background: url(../../Assets/image/background.jpg), #F5F7FF;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: contain;
+}
+
+.appointment{
+position: absolute;
+margin-right: 50px;
+width: 1029.58px;
+height: 261px;
+left: 328px;
+top: 51px;
+background: rgba(255, 255, 255, 0.24);
+backdrop-filter: blur(20px);
+border-radius: 16.3861px;
+}

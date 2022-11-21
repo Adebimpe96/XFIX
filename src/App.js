@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/Layouts/Navbar";
 import LandingPage from "./pages/LandingPage";
 import Error from "./components/Error";
@@ -47,7 +46,9 @@ function App() {
           {/* Template Children routes */}
           <Route element={<Template />}>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/jobs" element={<Jobs />}>
+              <Route path="/jobs/jobsdetails/:id" />
+            </Route>
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/support" element={<Support />} />
             <Route path="/history" element={<History />} />

@@ -1,49 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-
-import { Container, Form, Button, Modal } from "react-bootstrap";
-
-function MyVerticallyCenteredModal(props) {
-  return (
-    <Container>
-      <Modal
-        {...props}
-        size="md"
-        aria-labelledby="contained-modal-title-vcenter"
-        backdrop="static"
-        centered
-      >
-        <Modal.Header closeButton className="border-0 py-5" id="modal">
-          <Modal.Title id="contained-modal-title-vcenter">
-            <h6>Enter your registered email address to reset your password</h6>
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body id="modal">
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label id="label">Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer
-          className="border-0 justify-content-center py-3"
-          id="modal"
-        >
-          <Button
-            type="submit"
-            onClick={props.onHide}
-            id="label"
-            className="bg-transparent text-dark"
-          >
-            Reset Password
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </Container>
-  );
-}
+import Modal from "../Layouts/Modal/Modal";
 function Login() {
   document.title = `XFix-Login`;
 
@@ -101,10 +59,7 @@ function Login() {
           <p className="my-2 cursor-pointer" onClick={() => setModalShow(true)}>
             Forgot Password?
           </p>
-          <MyVerticallyCenteredModal
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-          />
+          <Modal show={modalShow} onHide={() => setModalShow(false)} />
         </form>
       </div>
 
