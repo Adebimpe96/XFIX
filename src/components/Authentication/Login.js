@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import Modal from "../Layouts/Modal/Modal";
+import { Modal} from "react-bootstrap";
 function Login() {
   document.title = `XFix-Login`;
 
