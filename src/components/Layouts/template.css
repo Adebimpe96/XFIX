@@ -12,4 +12,9 @@
     background: #fff;
     border-radius: .5rem
 }
-
+.leftsidebar{
+    width: 20%;
+}
+.rights{
+    width: 80%;
+}

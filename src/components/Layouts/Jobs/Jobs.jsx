@@ -1,6 +1,6 @@
 import "../Jobs/jobs.css";
 import requests from "../../data";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Jobs() {
@@ -19,7 +19,7 @@ function Jobs() {
 
   const navigate = useNavigate();
   const handleAccept = () => {
-    alert("Job accepted");
+    alert("Job accepted. Kindly reach out to the customer now.");
     navigate("/jobs");
   };
   const handleDecline = () => {
@@ -34,11 +34,24 @@ function Jobs() {
           {/* <h3 className='text-blue-900'> No Jobs yet</h3>
           <img src={emptyJob} alt="emptyjob" className='emptyjob'/>  */}
           {requests.map((requests, key) => (
-            <NavLink
+            <div
               key={key}
-              onClick={() => setInfo(requests.name)}
-              className="mt-4 flex justify-center"
-              to="#"
+              onClick={() =>
+                setInfo(
+                  <>
+                    <div className="info-name">
+                      customer Name: {requests.name}
+                    </div>
+                    <div className="info-address">
+                      Address: {requests.address}
+                    </div>
+                    <div className="info-details">
+                      Job description:{requests.details}
+                    </div>
+                  </>
+                )
+              }
+              className="mt-4 flex justify-center cursor-pointer request-map"
             >
               <div className="">
                 <img
@@ -49,14 +62,16 @@ function Jobs() {
               </div>
               <div className="request-link flex justify-around items-center">
                 <div className="request-details">
-                  <p className="text-2xl r_name font-bold">{requests.name}</p>
+                  <p className="text-2xl r_name font-bold hover:text-blue-400">
+                    {requests.name}
+                  </p>
                   <p>{requests.address}</p>
                 </div>
-                <div className="r_time">
+                <div className="r_time ">
                   <p className="">{requests.time}</p>
                 </div>
               </div>
-            </NavLink>
+            </div>
           ))}
         </div>
 
@@ -64,8 +79,10 @@ function Jobs() {
         <div className="right-job w-1/2 border-2 rounded-2xl">
           {!info ? (
             <>
-              <div className="first flex item-center justify-center py-4">
-                Select user profile to view details
+              <div className="first flex item-center justify-center h-full">
+                <p className="font-bold text-blue-900 text-2xl">
+                  Select user profile to reach out to the customer.
+                </p>
               </div>
             </>
           ) : null}
@@ -74,7 +91,7 @@ function Jobs() {
             <>
               <div className="second">
                 {info}
-                <div className="buttons flex justify-center items-center gap-4">
+                <div className="buttons flex justify-center items-center gap-2">
                   <button
                     className="accept_btn active:bg-pink-700"
                     onClick={handleAccept}
