@@ -37,24 +37,24 @@ const Confirm = () => {
             <div className=' flex flex-col md:flex-row mx-auto '>
             <form className="container mx-auto shadow-none mt-3 w-full">
                 <h5 className='font-bold pb-5 line'>Order details</h5>
-                <label class="block my-2 text-xs">
-                <span class="block text-xs font-medium text-slate-700">Full name</span>
+                <label className="block my-2 text-xs">
+                <span className="block text-xs font-medium text-slate-700">Full name</span>
                 <input type="text" className='text-xs w-full'  placeholder='Richard Fred' />
             </label>
-            <label class="block my-2 text-xs">
-                <span class="block text-xs font-medium text-slate-700">Home address</span>
+            <label className="block my-2 text-xs">
+                <span className="block text-xs font-medium text-slate-700">Home address</span>
                 <input type="text"  className='text-xs w-full' placeholder='Block 1, Ikorodu' />
             </label>
-            <label class="block my-2 text-xs">
-                <span class="block text-xs font-medium text-slate-700">Whatsapp contact</span>
+            <label className="block my-2 text-xs">
+                <span className="block text-xs font-medium text-slate-700">Whatsapp contact</span>
                 <input type="tel"  className='text-xs w-full' placeholder='+234800000000' />
             </label>
-            <label class="block my-2 text-xs">
-                <span class="block text-xs font-medium text-slate-700">Phone number</span>
+            <label className="block my-2 text-xs">
+                <span className="block text-xs font-medium text-slate-700">Phone number</span>
                 <input type="tel"  className='text-xs w-full' placeholder='+234800000000' />
             </label>
-            <label class="block my-2 text-xs">
-                <span class="block text-xs font-medium text-slate-700">Issue</span>
+            <label className="block my-2 text-xs">
+                <span className="block text-xs font-medium text-slate-700">Issue</span>
                 <input type="text" className='text-xs w-full' placeholder='Message'/>
             </label>
             <div className='inline-flex space-x-10 mx-auto text-center mt-8'>
