@@ -1,6 +1,5 @@
 import './customer.css';
 import { GoLocation } from "react-icons/go";
-// import { IoPaperPlaneSharp} from "react-icons/io";
 import Carousel from './Carousel';
 import Location from './Location';
 import Icon from '../Assets/icon/plane.png';
