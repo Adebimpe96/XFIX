@@ -2,7 +2,6 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import "../Layouts/template.css";
 import Sidebar from "./Sidebar";
-// import { Outlet } from "react-router-dom";
 function Template() {
   document.title = `xfix-template`;
   return (
