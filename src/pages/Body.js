@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+// import "../body.css";
 import LightSpeed from "react-awesome-reveal";
 import background from "../components/Assets/image/pictures.jpg";
 function Body() {

@@ -36,7 +36,7 @@ function Bodies() {
       </div>
 
       <div className="body-right w-1/2 h-full">
-        <div className="video w-2/4 object-contain">
+        <div className="video w-3/4 object-contain">
           <video srcSet={video} controls></video>
         </div>
       </div>

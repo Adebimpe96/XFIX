@@ -49,7 +49,9 @@ function App() {
           {/* Template Children routes */}
           <Route element={<Template />}>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="jobs" element={<Jobs />}></Route>
+            <Route path="/jobs" element={<Jobs />}>
+              <Route path="/jobs/jobsdetails/:id" />
+            </Route>
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/support" element={<Support />} />
             <Route path="/history" element={<History />} />

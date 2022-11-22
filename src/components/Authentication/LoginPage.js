@@ -17,7 +17,7 @@ const LoginPage = () => {
               <span className="text-yellow-500 font-bold">.</span>
             </h3>
             <div className="flex flex-col space-y-4 justify-between"></div>
-            <p className="text-red-600">
+            <p className="m-4 text-red-600">
               Don't have an account? <Link to="/signup">Sign up</Link>
             </p>
           </div>
