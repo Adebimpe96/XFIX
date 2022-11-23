@@ -34,7 +34,7 @@
   text-align: center;
 }
 .right-job {
-  height: 80%;
+  height: 95%;
   margin: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -42,8 +42,23 @@
   border: 1px solid rgba(255, 255, 255, 0.5);
   /* padding: 5px; */
 }
+
+.info-details{
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(223, 36, 51);
+}
+.info-address, .info-name{
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: rgb(9, 9, 112);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .buttons {
-  height: 100vh;
+  height: 94vh;
   margin: 50px;
 }
 .accept_btn,
@@ -61,5 +76,5 @@
 }
 .active li {
   border-right: 6px solid darkblue;
-  /* width: 100%; */
+  width: 100vw;
 }

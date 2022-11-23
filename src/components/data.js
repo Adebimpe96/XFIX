@@ -45,6 +45,7 @@ const requests = [
     name: "Dami",
     address: "10, Ikija street, Ikorodu.",
     time: "09:00am",
+    details: "I need a painter to help with the painting of my room.",
   },
   {
     id: 2,
@@ -52,6 +53,7 @@ const requests = [
     name: "Tosin",
     address: "8, Palm Avenue, Mushin.",
     time: "11:00am",
+    details: "I want to fix a water pipe in my bathroom",
   },
   {
     id: 3,
@@ -59,6 +61,7 @@ const requests = [
     name: "Zaynab",
     address: "1, Balogun street, Oshodi.",
     time: "10:00am",
+    details: "I need to repair my car urgently.",
   },
   {
     id: 4,
@@ -66,6 +69,7 @@ const requests = [
     name: "Adeola",
     address: "15, Olosha street, Oshodi.",
     time: "01:00pm",
+    details: "I need to fix my lamp holder urgently",
   },
   {
     id: 5,
@@ -73,6 +77,7 @@ const requests = [
     name: "Helen",
     address: "16, Olorunsogo street, Ikeja.",
     time: "08:00am",
+    details: "My aunt needs deliver a package at the Airport.",
   },
 ];
 export default requests;
