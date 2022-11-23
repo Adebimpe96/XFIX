@@ -10,10 +10,10 @@ const CustomerSupport =() =>{
             <div className="support flex flex-row justify-center">
                 <h4 className="text-white text-2xl p-5 font-bold">Support</h4>
             </div>
-            <div className="container-lg flex flex-col md:flex-row justify-between py-4">
-                <div className="col p-4">
+            <div className="container-lg flex flex-col md:flex-row justify-around py-4">
+                <div className="p-5 w-full md:w-1/5">
                     <h4 className="red font-bold text-2xl">Contact Info</h4>
-                    <div className="col-6">
+                    <div className="">
                     <p className="text-lightBlue my-3">With over 8 years experience in the industry, adipiscing elit. Tortor vel posuere</p>
                     <p className="text-lightBlue">0012, Chiranci Street Kano, Nigeria
                         electro@mailservice.com
@@ -21,7 +21,7 @@ const CustomerSupport =() =>{
                     </div>
 
                 </div>
-                <div className="col py-4 px-4">
+                <div className="p-5 w-full md:w-2/5">
                 <h4 className="text-darkBlue font-bold text-2xl">Send Us a Message</h4>
                 <form className="">
                 <label class="block my-2 text-xs">
@@ -58,7 +58,8 @@ const CustomerSupport =() =>{
                 </form>
                 </div>
             </div>
-            <div className="container-fluid flex flex-row flex-wrap justify-between text-darkBlue text-sm font-bold border-b border-gray-600">
+            <div className="container-fluid flex flex-row flex-wrap justify-between
+             text-darkBlue text-sm font-bold border-b border-gray-600 px-3">
                 <div className='inline-flex space-x-20 mb-2'>
                     <h5 className=''>Mobile app</h5>
                     <h5 className=''>Community</h5>
