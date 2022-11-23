@@ -3,7 +3,7 @@ import { MdOutlineEngineering } from 'react-icons/md'
 const CustomerHistory = (props) => {
 
     return(
-        <div className="container-fluid">
+        <div className="container-lg px-5">
             
             <div className="flex flex-row">
                 <h4 className="red font-semibold py-4 ps-3">{props.date}</h4>
