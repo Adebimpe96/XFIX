@@ -29,7 +29,7 @@ const items = [
 
 
 const Carousel = () => (
-  <div className='container-lg my-3'>
+  <div className='md:container md:mx-auto'>
       <AliceCarousel
         paddingRight={150}
         mouseTracking

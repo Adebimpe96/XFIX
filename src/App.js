@@ -26,6 +26,7 @@ import Customers from "./components/Customers/Customer";
 import Confirm from "./components/Customers/Confirmation";
 import HistoryPage from "./components/Customers/HistoryPage";
 import CustomerSupport from "./components/Customers/CustomerSupport";
+import Artisan from "./components/Artisan/Artisan";
 function App() {
   return (
     <div>
@@ -43,6 +44,7 @@ function App() {
           <Route path="navbar" element={<Navbar />} />
           <Route path="custdashboard" element={<CustDashboard />} />
           <Route path="artdashboard" element={<ArtDashboard />} />
+          <Route path="artappointment" element={<Artisan />} />
           <Route path="sidebar" element={<Sidebar />} />
           <Route path="*" element={<Error />} />
           <Route path="bodies" element={<Bodies />} />

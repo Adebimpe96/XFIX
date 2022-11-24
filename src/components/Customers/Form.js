@@ -1,10 +1,10 @@
 const Form = () => {
   return (
-    <div className="container-lg book">
-      <div className="row flex text-center my-3">
+    <div className="md:container md:mx-auto book">
+      <div className="row flex text-center justify-center my-3">
         <h4 className="font-bold text-white md:text-3xl ">Book Appointment</h4>
       </div>
-      <div className="container justify-center m-auto form ">
+      <div className="container justify-center m-auto form rounded-sm ">
         <form className="p-5 m-auto px-auto align-middle mt-3 c-form">
           <h5 className="text-darkBlue font-bold">
             Please fill in your details correctly

@@ -5,16 +5,36 @@ import Location from './Location';
 import Icon from '../Assets/icon/plane.png';
 import Book from './Book';
 import Form from './Form';
-const Customers =() => {
+import avatar from '../Assets/image/avatar.png';
+import avatar1 from '../Assets/image/avatar1.jpg';
 
+const Customers =() => {
+    const artisans =[
+        {
+            name: 'Eng. Leo',
+            image: avatar,
+        },
+        {
+            name: 'Eng. Joe',
+            image: avatar1,
+        },
+        {
+            name: 'Eng. Fred',
+            image: avatar,
+        },
+        {
+            name: 'Eng. Bryan',
+            image: avatar,
+        },
+    ]
 
     return(
-        <div className='container-lg header flex text-center justify-center flex-col customer'>
-            <div className=" my-6">
+        <div className='container-lg md:mx-auto header flex text-center justify-center flex-col customer'>
+            <div className="my-6">
                 <h3 className="font-semibold">Book Appointment</h3>
                 <p className="mt-4">Discover and hire an electrician near you</p>
             </div>
-            <label className="relative flex mx-auto w-80 md:w-64">
+            <label className="relative flex mx-auto w-80 md:w-64 my-5">
         <span className="sr-only">Search</span>
         <span className="absolute inset-y-0 left-1 flex items-center pl-2">
            <GoLocation  />
@@ -30,10 +50,16 @@ const Customers =() => {
         </label>
         <Carousel />
         <Location />
-        <Book />
-        <Book />
-        <Book />
-        <Book />
+        {
+            artisans.map((artisan) => {
+                return(
+                    <Book 
+                    name ={artisan.name}
+                    img ={artisan.image} />
+                )
+            })
+        }
+        
         <Form />
         </div>
     )
