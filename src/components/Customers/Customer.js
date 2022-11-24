@@ -9,7 +9,7 @@ const Customers =() => {
 
 
     return(
-        <div className='container-lg header flex text-center justify-center flex-col'>
+        <div className='container-lg header flex text-center justify-center flex-col customer'>
             <div className=" my-6">
                 <h3 className="font-semibold">Book Appointment</h3>
                 <p className="mt-4">Discover and hire an electrician near you</p>
