@@ -22,7 +22,8 @@ const ArtisanSideBar =() =>{
                 <MdOutlineEngineering fontSize='1.5em' />
                 <p className='font-semibold '>Jobs</p>
             </div>
-            <div className="sidebar-item inline-flex space-x-5 pr-3 hover:text-darkBlue hover:border-r-4 rounded-sm border-darkBlue">
+            <div className="sidebar-item inline-flex space-x-5 pr-3 hover:text-darkBlue
+             hover:border-r-4 rounded-sm border-darkBlue">
                 <img src={appointment} alt='' />
                 <p className='font-semibold '>Appointment</p>
             </div>
