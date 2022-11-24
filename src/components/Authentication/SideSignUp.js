@@ -31,7 +31,7 @@ const Signups = () => {
 
   return (
     <>
-      <div className="form block shadow-sm">
+      <div className="">
         <h2 className="text-blue-800">Welcome to Xfix!</h2>
         <p className="text-sky-500 mt-2">Create an account with xfix.</p>
         <form action="" method="post" className="" onSubmit={handleSubmit}>

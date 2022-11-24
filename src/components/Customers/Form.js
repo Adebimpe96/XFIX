@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 const Form = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/confirm");
+  };
   return (
     <div className="md:container md:mx-auto book">
       <div className="row flex text-center justify-center my-3">
@@ -58,7 +65,9 @@ const Form = () => {
             />
           </label>
           <div className="flex float-right flex-row justify-end w-1/3">
-            <button className="blue-btn text-xs">Submit</button>
+            <button className="blue-btn text-xs" onClick={handleClick}>
+              Submit
+            </button>
           </div>
         </form>
       </div>

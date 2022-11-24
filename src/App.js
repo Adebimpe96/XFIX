@@ -27,6 +27,7 @@ import Confirm from "./components/Customers/Confirmation";
 import HistoryPage from "./components/Customers/HistoryPage";
 import CustomerSupport from "./components/Customers/CustomerSupport";
 import Artisan from "./components/Artisan/Artisan";
+import Header from "./components/Customers/Header";
 function App() {
   return (
     <div>
@@ -48,7 +49,7 @@ function App() {
           <Route path="sidebar" element={<Sidebar />} />
           <Route path="*" element={<Error />} />
           <Route path="bodies" element={<Bodies />} />
-
+          <Route path="header" element={<Header />} />
           <Route path="template" element={<Template />} />
 
           {/* Template Children routes */}
