@@ -30,11 +30,7 @@ backdrop-filter: blur(25px);
 }
 
 /* Customer Support Styling */
-.support {
-    background: url(../Assets/image/support.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .insta {
     height: 24px;
     width: 24px;
