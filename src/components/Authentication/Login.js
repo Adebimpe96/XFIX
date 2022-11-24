@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { Modal} from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 function Login() {
   document.title = `XFix-Login`;
 
@@ -24,12 +24,12 @@ function Login() {
   };
   const [modalShow, setModalShow] = useState(false);
   return (
-    <div className="container-md">
+    <div className="container-md ">
       <div className="login-content">
         <h3 className="text-blue-800">Welcome back!</h3>
         <p className="text-sky-500">Sign in to continue</p>
         <p style={{ color: "red", fontSize: "1.2rem" }}>{error}</p>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="container">
           <label> Email</label> &nbsp;
           <input
             type="email"

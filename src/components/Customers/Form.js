@@ -1,5 +1,4 @@
 const Form = () => {
-
   return (
     <div className="container-lg book">
       <div className="row flex text-center my-3">
@@ -7,7 +6,9 @@ const Form = () => {
       </div>
       <div className="container justify-center m-auto form ">
         <form className="p-5 m-auto px-auto align-middle mt-3 c-form">
-          <h5 className="text-darkBlue font-bold">Please fill in your details correctly</h5>
+          <h5 className="text-darkBlue font-bold">
+            Please fill in your details correctly
+          </h5>
           <label class="block my-2 text-xs">
             <span class="block text-xs font-medium text-slate-700">
               Full name
@@ -58,12 +59,11 @@ const Form = () => {
           </label>
           <div className="flex float-right flex-row justify-end w-1/3">
             <button className="blue-btn text-xs">Submit</button>
-            </div>
-
-            </form>
-            </div>
-            </div>
-    )
-}
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
 
 export default Form;

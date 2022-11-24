@@ -28,7 +28,7 @@ function Jobs() {
   };
 
   return (
-    <div className="jobs flex justify-center items-center h-screen">
+    <div className=" container-lg jobs flex justify-center items-center h-screen">
       <div className="job-container flex justify-between items-center">
         <div className="left-job h-full rounded-2xl">
           {/* <h3 className='text-blue-900'> No Jobs yet</h3>

@@ -176,3 +176,6 @@ form button:hover {
 .error p{
   font-size: 25px;
 }
+.c-form{
+  height: 400px;
+}
