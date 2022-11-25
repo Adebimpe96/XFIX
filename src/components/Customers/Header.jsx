@@ -7,7 +7,7 @@ const Header = () => {
       <div className="customer_header w-full h-10 px-5 flex justify-between shadow-transparent">
         <img src={logo} alt="logo" className="w-40 h-30 object-cover" />
         <div className="link w-1/3 flex">
-          <ul className="w-full flex justify-between items-center text-white font-bold">
+          <ul className="w-full flex justify-between items-center text-white font-normal">
             <Link to="/booking" className="">
               Home
             </Link>
