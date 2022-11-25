@@ -2,7 +2,7 @@ import today from '../Assets/icon/today.png';
 import next from '../Assets/icon/next.png';
 import past from '../Assets/icon/past1.png';
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md';
-
+import icon from '../Assets/icon/cal.png';
 const Calendar = () => {
 
     return(
@@ -13,7 +13,11 @@ const Calendar = () => {
                 2022 Nov
                 <MdOutlineArrowForwardIos color='#899499' className='my-auto mx-3'/>
             </h4></div>
-            <div className="text-white col text-end my-auto"><h4 className="mb-2 text-sm mr-3 my-auto font-light">This Month's Appointment</h4></div>
+            <div className="inline-flex text-white col text-end my-auto px-3">
+                <h4 className="mb-2 text-sm my-auto mx-3 font-light">
+                This Month's Appointment </h4>
+                <img src={icon} alt='' className='my-auto' />
+                </div>
         </div>
         <div className='grid grid-cols-7 gap-1 text-darkBlue font-light text-center'>
             <div className='text-darkBlue'>Sunday</div>
@@ -25,41 +29,92 @@ const Calendar = () => {
             <div className='text-darkBlue'>Saturday</div>
             </div>
         <div className='grid grid-cols-7 gap-1 text-darkBlue font-semibold text-start p-2'>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>1</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>2</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>3</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>4</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>5</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>6</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>7</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>8</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>9</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>10</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>11</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>12</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>13</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>14</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>15</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>16</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>17</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>18</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>19</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>10</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>21</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>22</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>23</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>24</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>25</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>26</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>27</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>28</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>29</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>30</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5'>31</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5 text-gray-400'>1</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5 text-gray-400'>2</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5 text-gray-400'>3</div>
-            <div className='bg-white rounded-md w-32 mb-1 py-5 text-gray-400'>4</div>
+            <div className='bg-white rounded-md cal-item mb-1'>1</div>
+            <div className='bg-white rounded-md cal-item mb-1'>2</div>
+            <div className='bg-white rounded-md cal-item mb-1'>3</div>
+            <div className='bg-white rounded-md cal-item mb-1'>4</div>
+
+            <div className='bg-white rounded-md cal-item mb-1 px-2'>
+                5
+                <div className='bg-gray-500 rounded-sm flex flex-row justify-between p-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>The Johnson's House</p>
+                </div>
+            </div>
+
+            <div className='bg-white rounded-md cal-item mb-1'>6</div>
+            <div className='bg-white rounded-md cal-item mb-1'>7</div>
+            <div className='bg-white rounded-md cal-item mb-1'>8</div>
+            <div className='bg-white rounded-md cal-item mb-1'>9</div>
+            <div className='bg-white rounded-md cal-item mb-1'>10</div>
+            <div className='bg-white rounded-md cal-item mb-1 px-2'>11
+            <div className='bg-gradient-to-b from-solidRed to-solidBlue rounded-sm flex flex-row justify-between p-0.5 my-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>Collins</p>
+                </div>
+                <div className='bg-gradient-to-b from-solidRed to-solidBlue rounded-sm flex flex-row justify-between p-0.5 my-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>Dami</p>
+                </div>
+                <div className='bg-gradient-to-b from-solidRed to-solidBlue rounded-sm flex flex-row justify-between p-0.5 my-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>Bridget</p>
+                </div>
+            </div>
+            <div className='bg-white rounded-md cal-item mb-1'>12</div>
+            <div className='bg-white rounded-md cal-item mb-1'>13</div>
+            <div className='bg-white rounded-md cal-item mb-1'>14</div>
+            <div className='bg-white rounded-md cal-item mb-1'>15</div>
+            <div className='bg-white rounded-md cal-item mb-1'>16</div>
+            <div className='bg-white rounded-md cal-item mb-1 px-2'>17
+            <div className='bg-solidBlue rounded-sm flex flex-row justify-between p-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>The Johnson's House</p>
+                </div>
+            </div>
+            <div className='bg-white rounded-md cal-item mb-1'>18</div>
+            <div className='bg-white rounded-md cal-item mb-1'>19</div>
+            <div className='bg-white rounded-md cal-item mb-1'>10</div>
+            <div className='bg-white rounded-md cal-item mb-1 px-2'>21
+            <div className='bg-solidBlue rounded-sm flex flex-row justify-between p-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>The Johnson's House</p>
+                </div>
+            </div>
+            <div className='bg-white rounded-md cal-item mb-1'>22</div>
+            <div className='bg-white rounded-md cal-item mb-1'>23</div>
+            <div className='bg-white rounded-md cal-item mb-1'>24</div>
+            <div className='bg-white rounded-md cal-item mb-1 px-2'>25
+            <div className='bg-solidBlue rounded-sm flex flex-row justify-between p-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>The Johnson's House</p>
+                </div>
+            </div>
+            <div className='bg-white rounded-md cal-item mb-1'>26</div>
+            <div className='bg-white rounded-md cal-item mb-1'>27</div>
+            <div className='bg-white rounded-md cal-item mb-1 px-2'>28
+                  <div className='bg-solidBlue rounded-sm flex flex-row justify-between p-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>The Johnson's House</p>
+                </div>
+                  <div className='bg-solidBlue rounded-sm flex flex-row justify-between p-0.5 my-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>The Johnson's House</p>
+                </div>
+            </div>
+            <div className='bg-white rounded-md cal-item mb-1'>29</div>
+            <div className='bg-white rounded-md cal-item mb-1'>30</div>
+            <div className='bg-white rounded-md cal-item mb-1 px-2'>31
+                  <div className='bg-solidBlue rounded-sm flex flex-row justify-between p-0.5'>
+                    <p className='text-[8px] text-white font-thin'>1:00pm</p>
+                    <p className='text-[8px] text-white font-thin'>The Johnson's House</p>
+                </div>
+                 
+            </div>
+            <div className='bg-white rounded-md cal-item mb-1 text-gray-400'>1</div>
+            <div className='bg-white rounded-md cal-item mb-1 text-gray-400'>2</div>
+            <div className='bg-white rounded-md cal-item mb-1 text-gray-400'>3</div>
+            <div className='bg-white rounded-md cal-item mb-1 text-gray-400'>4</div>
         </div>
       
         <div className="flex flex-row font-semibold justify-between m-3 space-x-5">
