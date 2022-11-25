@@ -1,8 +1,13 @@
 import logo from "../Assets/image/x.png";
 import "../Layouts/sidebar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Sidebar() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.clear("authenticated");
+    navigate("/");
+  };
   const routes = [
     {
       id: 1,
@@ -60,7 +65,11 @@ function Sidebar() {
 
         <div className="logout flex justify-center items-center text-xl">
           <i class="fa-solid fa-power-off text-red-700"></i>
-          <NavLink className="ml-3 text-blue-900" to="/logout">
+          <NavLink
+            className="ml-3 text-blue-900"
+            to="/logout"
+            onClick={handleLogout}
+          >
             Logout
           </NavLink>
         </div>
