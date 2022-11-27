@@ -1,6 +1,14 @@
 .blue-txt {
     color: #020C31;
 }
+.darkBlue {
+  background-color: #020C31;
+}
+select.title{
+  color: #020C31;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .line{
     text-decoration: underline;
 }

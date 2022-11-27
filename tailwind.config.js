@@ -9,6 +9,7 @@ module.exports = {
         'lightGray': ' #C2C2C2',
         'solidBlue': '#001970',
         'solidRed' : '#BB0404',
+        'xfixYellow': '#FFCE31',
 
       }
     },
