@@ -16,7 +16,7 @@ const OrderStatus=()=>{
             <p className="container text-lg font-normal ">Your order has been successfully placed, 
                 the artisan will get in touch with you as soon as possible</p>
         </div>
-        <Link to='/' className="container flex flex-row justify-center mx-auto bg-darkBlue text-white text-md-center
+        <Link to='/custdashboard' className="container flex flex-row justify-center mx-auto bg-darkBlue text-white text-md-center
         text-decoration-none py-3">
             <button type="button" className="inline-flex">
             <MdArrowBack fontSize='1.5em' className="mx-2" />
