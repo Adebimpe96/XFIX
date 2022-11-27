@@ -16,6 +16,8 @@ width: 200px;
  }
  
   .logout{
+  font-size: 22px;
+  font-weight: bold;
     margin-right: 100px;
-    padding: 50px;
+    padding: 70px;
   }

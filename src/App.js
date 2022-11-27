@@ -30,6 +30,7 @@ import CustomerTemplate from "./components/Customers/CustomerTemplate";
 import Location from "./components/Customers/Location";
 import OrderForm from "./components/Customers/OrderForm";
 import CustLogin from "./components/Authentication/CustLogin";
+import CDashboard from "./components/Customers/CDashBoard";
 function App() {
   return (
     <div>
@@ -37,7 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="body" element={<Body />} />
-          <Route path="custsupport" element={<CustomerSupport />} />
+          {/* <Route path="custsupport" element={<CustomerSupport />} /> */}
           <Route path="custlogin" element={<CustLogin />} />
           <Route path="artlogin" element={<ArtLogin />} />
           <Route path="signup" element={<SignUp />} />

@@ -1,14 +1,11 @@
-import Dashboard from "../components/Customers/DashBoard";
+import Dashboard from "../components/Customers/CDashBoard";
 
-const CustomerDashBoard =() =>{
-
-
-    return(
-        <>
-        <Dashboard />
-        </>
-           
-    )
-}
+const CustomerDashBoard = () => {
+  return (
+    <>
+      <Dashboard />
+    </>
+  );
+};
 
 export default CustomerDashBoard;

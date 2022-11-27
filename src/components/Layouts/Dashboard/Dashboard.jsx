@@ -48,9 +48,9 @@ function Dashboard({ user }) {
     <div className="dashboard">
       <div className="notification flex justify-end items-center">
         <div className="username-display">
-          <h3 className="font-bold text-xl text-blue-900">
+          {/* <h3 className="font-bold text-xl text-blue-900">
             Hello, {user?.email}
-          </h3>
+          </h3> */}
         </div>
         <i class="fa-regular fa-bell text-2xl text-slate-400 mt-4"></i>
         <img src={avatar} alt="" className="ml-3 avatar mt-4" />

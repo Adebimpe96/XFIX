@@ -1,23 +1,26 @@
 import { BsFacebook, BsTwitter } from "react-icons/bs";
-import { FaTiktok } from "react-icons/fa";
-import insta from "../Assets/icon/insta.png";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
+// import xfix from "../Assets/image/x7.png";
 
 const CustomerSupport = () => {
   return (
     <div className="">
-      <div className="support flex justify-between items-center">
-        <h4 className="text-white text-2xl p-5 font-bold">Support</h4>
+      <div className="flex justify-center items-center">
+        <h4 className="pb-3 text-lightBlue text-2xl font-bold">Support</h4>
       </div>
-      <div className="container-lg flex flex-col md:flex-row justify-around py-4">
-        <div className="p-5 w-full md:w-1/5">
-          <h4 className="red font-bold text-2xl">Contact Info</h4>
+      <div className="container-lg flex md:flex-row justify-around">
+        <div className="w-full md:w-1/5 pt-4">
+          <h4 className=" text-red-600 font-bold text-2xl">Contact Info</h4>
           <div className="">
             <p className="text-lightBlue my-3">
-              With over 8 years experience in the industry, adipiscing elit.
-              Tortor vel posuere
+              With our experience in the industry, we promise to give you
+              uptimum and reliable support always.
             </p>
             <p className="text-lightBlue">
-              0012, Chiranci Street Kano, Nigeria electro@mailservice.com
+              1614, Oko-Awo Street Lagos, Nigeria.
+            </p>
+            <p className="font-bold  text-lightBlue">
+              xfix@mailservice.com <br />
               +2348100112233
             </p>
           </div>
@@ -64,19 +67,9 @@ const CustomerSupport = () => {
       <div
         className="container-fluid flex flex-row flex-wrap justify-between
              text-darkBlue text-sm font-bold border-b border-gray-600 px-3"
-      >
-        <div className="inline-flex space-x-20 mb-2">
-          <h5 className="">Mobile app</h5>
-          <h5 className="">Community</h5>
-        </div>
-        <div className=" mb-2">{/* <img src={xfix} alt="" /> */}</div>
-        <div className="inline-flex space-x-20 mb-2">
-          <h5 className="">Help desk</h5>
-          <h5 className="">Resources</h5>
-        </div>
-      </div>
+      ></div>
       <div className="flex flex-row justify-center space-x-5 py-4">
-        <img src={insta} alt="instagram" className="insta" />
+        <FaInstagram color="#bc2a8d" fontSize="1.5em" />
         <BsFacebook color="#006AFF" fontSize="1.5em" />
         <BsTwitter color="#1DA1F2" fontSize="1.5em" />
         <FaTiktok fontSize="1.5em" />

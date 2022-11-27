@@ -5,14 +5,11 @@ import {
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-const Dashboard = () => {
+const CDashboard = () => {
   return (
     <>
-      <div className="text-white darkBlue py-3">
-        <Link
-          to="/"
-          className="container flex flex-row text-decoration-none text-white"
-        >
+      <div className="container text-lightBlue py-3">
+        <Link to="/" className="container flex flex-row text-decoration-none">
           <h4 className="font-normal ">Home</h4>
         </Link>
         <div className="container flex flex-row justify-between">
@@ -28,7 +25,7 @@ const Dashboard = () => {
       <div class="dropdown">
         <div
           id="dropdownMenuButton2"
-          className="container my-5 py-5 rounded-md flex flex-row shadow-md drop-shadow-lg font-semibold justify-between "
+          className="container my-5 py-5 rounded-md flex flex-row shadow-md drop-shadow-lg font-semibold justify-between items-center "
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
@@ -92,4 +89,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default CDashboard;

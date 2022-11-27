@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const OrderForm = () => {
   return (
     <>
-      <div className="text-white darkBlue py-3 align-middle">
+      <div className="text-darkBlue py-3 align-middle">
         <div className="container flex flex-row text-white">
           <h4>New Order</h4>
         </div>
