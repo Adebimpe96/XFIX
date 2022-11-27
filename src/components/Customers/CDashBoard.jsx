@@ -4,8 +4,20 @@ import {
   MdOutlinePersonOutline,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
+import RecentOrder from "./RecentOrder";
 
 const CDashboard = () => {
+  const recent = [
+    {
+      category: "Electrical",
+    },
+    {
+      category: "Plumbing",
+    },
+    {
+      category: "Delivery",
+    },
+  ];
   return (
     <>
       <div className="container text-lightBlue py-3">
@@ -38,42 +50,9 @@ const CDashboard = () => {
           class="container dropdown-menu backdrop-blur-xl bg-white/30 max-h-48 overflow-auto"
           aria-labelledby="dropdownMenuButton2"
         >
-          <li>
-            <Link className="dropdown-item " to="">
-              <div className="container bg-slate-100 rounded-md">
-                <div className="flex flex-row justify-between">
-                  <h4>#899499</h4>
-                  <p className="text-darkBlue font-medium">#10000</p>
-                </div>
-                <p>This is a text</p>
-                <p>This is a text</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link className="dropdown-item" to="">
-              <div className="container bg-slate-100 rounded-md">
-                <div className="flex flex-row justify-between">
-                  <h4>#899499</h4>
-                  <p className="text-darkBlue font-medium">#10000</p>
-                </div>
-                <p>This is a text</p>
-                <p>This is a text</p>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link className="dropdown-item" to="">
-              <div className="container bg-slate-100 rounded-md">
-                <div className="flex flex-row justify-between">
-                  <h4>#899499</h4>
-                  <p className="text-darkBlue font-medium">#10000</p>
-                </div>
-                <p>This is a text</p>
-                <p>This is a text</p>
-              </div>
-            </Link>
-          </li>
+          {recent.map((order) => {
+            return <RecentOrder category={order.category} />;
+          })}
         </ul>
       </div>
 
