@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import "../Authentication/side.css";
-import Login from "./Login";
+import Login from "./CustLoginpage";
 
-const LoginPage = () => {
+const ArtLogin = () => {
   return (
     <div>
-      {/* <Header/> */}
       <div className="content">
         <div className="left">
           <div className="left-content">
-            <h3 className="ml-6 font-bold">
+            <h3 className="ml-2 font-bold">
               {" "}
-              Your sure plug for home service professionals
+              Your sure plug for quick on-demand jobs.
               <span className="text-blue-700 font-bold">.</span>
               <span className="text-red-800 font-bold">.</span>
               <span className="text-yellow-500 font-bold">.</span>
@@ -32,4 +31,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default ArtLogin;

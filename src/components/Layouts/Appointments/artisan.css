@@ -1,5 +1,6 @@
 .artisan {
-    background: url(../Assets/image/mechanic.jpg);
+    height: 100vh;
+    background: url(../../Assets/image/mechanic.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

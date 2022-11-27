@@ -41,8 +41,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* max-width: 1300px; */
-    /* margin: 0 auto; */
   }
 }
 @media screen and (min-width: 800px) {
@@ -109,7 +107,6 @@
   border-radius: 30px;
 }
 .fix{
-  /* color: rgb(232, 95, 123); */
   color: red;
   text-transform: capitalize;
 }

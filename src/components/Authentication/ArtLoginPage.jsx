@@ -59,7 +59,7 @@ const Modal = ({ onClick }) => {
   );
 };
 
-function Login() {
+function ArtLogin() {
   document.title = `XFix-Login`;
 
   const {
@@ -67,15 +67,9 @@ function Login() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const navigate = useNavigate();
-  const [error, setError] = useState("");
+
   const onSubmit = (data) => {
-    if (data.email === "user@gmail.com" && data.password === "1234") {
-      localStorage.setItem("authenticated", true);
-      navigate("/dashboard");
-    } else {
-      setError("Invalid login details");
-    }
+    console.log(data);
   };
 
   const [showForgot, setShowForgot] = useState(false);
@@ -133,4 +127,4 @@ function Login() {
     </>
   );
 }
-export default Login;
+export default ArtLogin;

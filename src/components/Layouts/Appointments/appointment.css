@@ -1,4 +1,4 @@
-.a_containter{
+/* .a_containter{
     position: relative;
     width: 1728px;
     height: 1338px;
@@ -19,4 +19,9 @@ top: 51px;
 background: rgba(255, 255, 255, 0.24);
 backdrop-filter: blur(20px);
 border-radius: 16.3861px;
+} */
+.artisan {
+    background: url(../Assets/image/mechanic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }

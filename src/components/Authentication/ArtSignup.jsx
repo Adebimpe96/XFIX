@@ -1,24 +1,59 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
-function ArtSidesignup() {
+function Artsignup() {
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      location: "",
+      expertise: "",
+    },
+  });
   return (
     <div>
-      <div className="form block shadow-sm">
+      <div className="block">
         <h2 className="text-blue-800">Welcome to Xfix!</h2>
         <p className="text-sky-500 mt-2">Create an account with xfix.</p>
-        <form action="" method="post" className="">
+        <form
+          action=""
+          method="post"
+          className=""
+          onSubmit={handleSubmit(console.log)}
+        >
           <label htmlFor="name" className="">
-            Full Name
+            First Name
           </label>
-          <input type="text" name="fname" id="fname" className="form-input" />
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            className="form-input"
+            {...register("firstName", { required: true })}
+          />
+          <label htmlFor="name" className="">
+            Last Name
+          </label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            className="form-input"
+            {...register("lastName", { required: true })}
+          />
           <label htmlFor="name" className="">
             Email
           </label>
-          <input type="email" name="email" id="email" className="form-input" />
-          <label htmlFor="phone" className="">
-            Phone number
-          </label>
-          <input type="number" name="" id="" className="form-input" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className="form-input"
+            {...register("email", { required: true })}
+          />
           <label htmlFor="password" className="">
             Password
           </label>
@@ -27,6 +62,7 @@ function ArtSidesignup() {
             name="password"
             id="password"
             className="form-input"
+            {...register("password", { required: true })}
           />
           <label htmlFor="password" className="">
             Confirm password
@@ -36,18 +72,15 @@ function ArtSidesignup() {
             name="password"
             id="password"
             className="form-input"
-          />
-          <label htmlFor="address" className="">
-            House address
-          </label>
-          <input
-            type="text"
-            name="address"
-            id="address"
-            className="form-input"
+            {...register("password", { required: true })}
           />{" "}
           <label htmlFor="city">Location</label>
-          <select id="city" name="city" className="select-form">
+          <select
+            id="city"
+            name="city"
+            className="select-form"
+            {...register("location")}
+          >
             <option value={""} className="hidden">
               Choose your area
             </option>
@@ -67,7 +100,12 @@ function ArtSidesignup() {
             <option value="ajah">Ajah</option> <br />
           </select>
           <label htmlFor="jobtype">Expertise</label>
-          <select id="jobtype" name="jobtype" className="select-form">
+          <select
+            id="jobtype"
+            name="jobtype"
+            className="select-form"
+            {...register("expertise")}
+          >
             <option value={""} className="hidden">
               Choose your specialization
             </option>
@@ -90,4 +128,4 @@ function ArtSidesignup() {
   );
 }
 
-export default ArtSidesignup;
+export default Artsignup;

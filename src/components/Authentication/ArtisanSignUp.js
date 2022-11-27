@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import ArtSidesignup from "./ArtSidesignup";
+import ArtSignup from "./ArtSignup";
 
-function ArtisanSignUp() {
+function ArtSideSignUp() {
   return (
     <div>
       <div className="content">
@@ -10,13 +10,13 @@ function ArtisanSignUp() {
             <h3 className="ml-4 font-bold">
               {" "}
               Connect with our large community of <br /> individuals who need
-              your service<span className="text-blue-700 font-bold">.</span>
+              your services<span className="text-blue-700 font-bold">.</span>
               <span className="text-red-800 font-bold">.</span>
               <span className="text-yellow-500 font-bold">.</span>
             </h3>
             <p className="mr-4 text-red-700">
               Already have an account?{" "}
-              <Link to="/login" className="hover:text-blue-700">
+              <Link to="/artlogin" className="hover:text-blue-700">
                 Sign in
               </Link>
             </p>
@@ -25,7 +25,7 @@ function ArtisanSignUp() {
         </div>
         <div className="right">
           <div className="right-content">
-            <ArtSidesignup />
+            <ArtSignup />
           </div>
         </div>
       </div>
@@ -33,4 +33,4 @@ function ArtisanSignUp() {
   );
 }
 
-export default ArtisanSignUp;
+export default ArtSideSignUp;

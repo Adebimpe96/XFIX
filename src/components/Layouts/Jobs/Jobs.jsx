@@ -48,6 +48,10 @@ function Jobs() {
                     <div className="info-details">
                       Job description:{requests.details}
                     </div>
+                    <div className="reachout flex justify-center items-center gap-3">
+                      <button className="call_btn">Call</button>
+                      <button className="msg_btn"> Message</button>
+                    </div>
                   </>
                 )
               }
