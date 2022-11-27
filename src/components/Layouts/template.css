@@ -14,7 +14,10 @@
 }
 .leftsidebar{
     width: 20%;
+    height: 100vh;
+  
 }
 .rights{
     width: 80%;
+    height: 100vh;
 }

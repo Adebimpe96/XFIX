@@ -14,7 +14,7 @@ function Body() {
                 <span className="text-red-500">quick fix</span> you need in your
                 home.
               </h3>
-              <div className="btn-link flex ">
+              <div className=" flex ">
                 <Link className="button_pry2 " to="/signup">
                   Hire a professional
                 </Link>

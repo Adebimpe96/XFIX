@@ -22,48 +22,41 @@ import Appointment from "./components/Layouts/Appointments/Appointment";
 import History from "./components/Layouts/History/History";
 import Support from "./components/Layouts/Support/Support";
 import Bodies from "./components/Bodies";
-import Customers from "./components/Customers/Customer";
-import Confirm from "./components/Customers/Confirmation";
 import HistoryPage from "./components/Customers/HistoryPage";
 import CustomerSupport from "./components/Customers/CustomerSupport";
 import Header from "./components/Customers/Header";
 import NewOrder from "./components/Customers/NewOrder";
-// import CustomerSideBar from "./components/Customers/CustomerSideBar";
 import CustomerTemplate from "./components/Customers/CustomerTemplate";
 import Location from "./components/Customers/Location";
 import OrderForm from "./components/Customers/OrderForm";
 import CustLogin from "./components/Authentication/CustLogin";
 function App() {
-  // const [user, setUser] = useState(null);
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="body" element={<Body />} />
-          <Route path="booking" element={<Customers />} />
-          <Route path="customerhistory" element={<HistoryPage />} />
-          <Route path="customersupport" element={<CustomerSupport />} />
-          <Route path="confirm" element={<Confirm />} />
+          <Route path="custsupport" element={<CustomerSupport />} />
           <Route path="custlogin" element={<CustLogin />} />
           <Route path="artlogin" element={<ArtLogin />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="artsignup" element={<ArtisanSignUp />} />
           <Route path="navbar" element={<Navbar />} />
-          <Route path="custdashboard" element={<CustomerDashBoard />} />
           <Route path="artdashboard" element={<ArtDashboard />} />
-          {/* <Route path="artappointment" element={<Artisan />} /> */}
           <Route path="sidebar" element={<Sidebar />} />
           <Route path="*" element={<Error />} />
           <Route path="bodies" element={<Bodies />} />
           <Route path="header" element={<Header />} />
-          <Route path="template" element={<Template />} />
 
           {/*Customer Side bar children routes */}
           <Route element={<CustomerTemplate />}>
+            <Route path="custdashboard" element={<CustomerDashBoard />} />
             <Route path="neworder" element={<NewOrder />} />
             <Route path="location" element={<Location />} />
             <Route path="orderform" element={<OrderForm />} />
+            <Route path="custhistory" element={<HistoryPage />} />
+            <Route path="custsupport" element={<CustomerSupport />} />
           </Route>
 
           {/* Template Children routes */}
@@ -71,6 +64,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/appointment" element={<Appointment />} />
+
             <Route path="/support" element={<Support />} />
             <Route path="/history" element={<History />} />
           </Route>

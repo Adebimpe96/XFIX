@@ -1,37 +1,60 @@
-import xfix from '../Assets/icon/XFix.png';
-import { Link } from "react-router-dom";
-import { MdOutlineDashboard, MdOutlineHistory, MdOutlineSupportAgent, MdOutlineLogout } from 'react-icons/md';
+import logo from "../Assets/image/x.png";
+import "../Layouts/sidebar.css";
+import { NavLink } from "react-router-dom";
 
+function CustomerSidebar() {
+  const routes = [
+    {
+      id: 1,
+      icon: "fa-solid fa-border-all",
+      text: "Dashboard",
+      url: "/custdashboard",
+    },
+    {
+      id: 2,
+      icon: "fa-solid fa-clock-rotate-left",
+      text: "History",
+      url: "/custhistory",
+    },
 
-const CustomerSideBar =() => {
- 
-  
+    {
+      id: 3,
+      icon: "fa-solid fa-users-gear",
+      text: "Support",
+      url: "/custsupport",
+    },
+  ];
 
-    return (
-        <>
-      <div className='container flex flex-col mx-auto'>
-          <div className='py-5'><img src={xfix} alt='' className="py-3" /></div>
-        <div className='space-y-10'>
-            <Link to='/custdashboard' className="flex flex-row space-x-5 text-decoration-none text-gray-500 hover:text-darkBlue hover:border-r-4 border-darkBlue">
-                <MdOutlineDashboard fontSize='1.6em' className="" />
-                <h3 className="text-2xl my-auto">Dashboard</h3>
-            </Link>
-            <Link className="flex flex-row space-x-5 text-decoration-none text-gray-500 hover:text-darkBlue hover:border-r-4 border-darkBlue">
-                <MdOutlineHistory fontSize='1.6em' />
-                <h3 className="text-2xl my-auto">History</h3>
-            </Link>
-            <Link to='/support' className="flex flex-row space-x-5 text-decoration-none text-gray-500 hover:text-darkBlue hover:border-r-4 border-darkBlue">
-                <MdOutlineSupportAgent fontSize='1.6em' />
-                <h3 className="text-2xl my-auto">Support</h3>
-            </Link>
-            <Link className="flex flex-row red space-x-5 py-5 text-decoration-none">
-                <MdOutlineLogout fontSize='1.6em' />
-                <h3 className="text-2xl my-auto">Logout</h3>
-            </Link>
+  return (
+    <div className="w-1/4 h-screen sidemain">
+      <div className="image">
+        <img src={logo} alt="logo" className="w-20 h-12 object-cover" />
+      </div>
+      <div className="sidebar-content">
+        <ul>
+          {routes.map((route) => (
+            <NavLink
+              key={route.id}
+              className=" text-blue-900 w-full h-40  font-bold text-2xl"
+              to={route.url}
+            >
+              <div className="flex gap-2 items-center my-10 text-xl">
+                <i className={`${route.icon}`}></i>
+                <li>{route.text}</li>
+              </div>
+            </NavLink>
+          ))}
+        </ul>
+
+        <div className="logout flex justify-center items-center text-xl">
+          <i class="fa-solid fa-power-off text-red-700"></i>
+          <NavLink className="ml-3 text-blue-900" to="/logout" onClick={""}>
+            Logout
+          </NavLink>
         </div>
       </div>
-            </>
-    )
+    </div>
+  );
 }
 
-export default CustomerSideBar; 
+export default CustomerSidebar;

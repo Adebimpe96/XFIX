@@ -1,13 +1,11 @@
-import xfix from "../Assets/icon/XFix.png";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import insta from "../Assets/icon/insta.png";
-import Header from "./Header";
+
 const CustomerSupport = () => {
   return (
     <div className="">
-      <Header />
-      <div className="support flex flex-row justify-center">
+      <div className="support flex justify-between items-center">
         <h4 className="text-white text-2xl p-5 font-bold">Support</h4>
       </div>
       <div className="container-lg flex flex-col md:flex-row justify-around py-4">
@@ -71,9 +69,7 @@ const CustomerSupport = () => {
           <h5 className="">Mobile app</h5>
           <h5 className="">Community</h5>
         </div>
-        <div className=" mb-2">
-          <img src={xfix} alt="" />
-        </div>
+        <div className=" mb-2">{/* <img src={xfix} alt="" /> */}</div>
         <div className="inline-flex space-x-20 mb-2">
           <h5 className="">Help desk</h5>
           <h5 className="">Resources</h5>

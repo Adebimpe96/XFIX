@@ -1,8 +1,7 @@
 .sidemain{
-height: 600px;
+height: 100vh;
 width: 200px;
 
-/* border: 1px solid red; */
 }
 .sidebar-content{
   width: 100%;
