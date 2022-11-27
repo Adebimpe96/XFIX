@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 // Authentication
 import SignUp from "./components/Authentication/SignUp";
@@ -11,7 +11,7 @@ import Sidebar from "./components/Layouts/Sidebar";
 import Template from "./components/Layouts/Template";
 
 //pages
-import CustDashboard from "./pages/CustDashboard";
+import CustomerDashBoard from "./pages/CustomerDashBoard";
 import ArtDashboard from "./pages/ArtDashboard";
 import Navbar from "./components/Layouts/Navbar";
 import LandingPage from "./pages/LandingPage";
@@ -27,11 +27,14 @@ import Confirm from "./components/Customers/Confirmation";
 import HistoryPage from "./components/Customers/HistoryPage";
 import CustomerSupport from "./components/Customers/CustomerSupport";
 import Header from "./components/Customers/Header";
+import NewOrder from "./components/Customers/NewOrder";
+// import CustomerSideBar from "./components/Customers/CustomerSideBar";
+import CustomerTemplate from "./components/Customers/CustomerTemplate";
+import Location from "./components/Customers/Location";
+import OrderForm from "./components/Customers/OrderForm";
 import CustLogin from "./components/Authentication/CustLogin";
-import ProtectedRoute from "./components/Authentication/protectedRoute";
-
 function App() {
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
   return (
     <div>
       <BrowserRouter>
@@ -43,28 +46,29 @@ function App() {
           <Route path="customersupport" element={<CustomerSupport />} />
           <Route path="confirm" element={<Confirm />} />
           <Route path="custlogin" element={<CustLogin />} />
-          <Route path="artlogin" element={<ArtLogin setUser={setUser} />} />
+          <Route path="artlogin" element={<ArtLogin />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="artsignup" element={<ArtisanSignUp />} />
           <Route path="navbar" element={<Navbar />} />
-          <Route path="custdashboard" element={<CustDashboard />} />
-          <Route path="artdashboard" element={<ArtDashboard user={user} />} />
+          <Route path="custdashboard" element={<CustomerDashBoard />} />
+          <Route path="artdashboard" element={<ArtDashboard />} />
+          {/* <Route path="artappointment" element={<Artisan />} /> */}
           <Route path="sidebar" element={<Sidebar />} />
           <Route path="*" element={<Error />} />
           <Route path="bodies" element={<Bodies />} />
           <Route path="header" element={<Header />} />
           <Route path="template" element={<Template />} />
 
+          {/*Customer Side bar children routes */}
+          <Route element={<CustomerTemplate />}>
+            <Route path="neworder" element={<NewOrder />} />
+            <Route path="location" element={<Location />} />
+            <Route path="orderform" element={<OrderForm />} />
+          </Route>
+
           {/* Template Children routes */}
           <Route element={<Template />}>
-            <Route
-              path="/dashboard"
-              element={
-                <ProtectedRoute>
-                  <Dashboard />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/support" element={<Support />} />
