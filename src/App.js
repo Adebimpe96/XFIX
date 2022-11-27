@@ -30,6 +30,8 @@ import CustomerTemplate from "./components/Customers/CustomerTemplate";
 import Location from "./components/Customers/Location";
 import OrderForm from "./components/Customers/OrderForm";
 import CustLogin from "./components/Authentication/CustLogin";
+import OrderDetails from "./components/Customers/OrderDetails";
+import OrderStatus from "./components/Customers/OrderStatus";
 function App() {
   return (
     <div>
@@ -48,7 +50,7 @@ function App() {
           <Route path="*" element={<Error />} />
           <Route path="bodies" element={<Bodies />} />
           <Route path="header" element={<Header />} />
-
+          <Route path="orderstatus" element={<OrderStatus />} />
           {/*Customer Side bar children routes */}
           <Route element={<CustomerTemplate />}>
             <Route path="custdashboard" element={<CustomerDashBoard />} />
@@ -57,6 +59,7 @@ function App() {
             <Route path="orderform" element={<OrderForm />} />
             <Route path="custhistory" element={<HistoryPage />} />
             <Route path="custsupport" element={<CustomerSupport />} />
+            <Route path="orderdetails" element={<OrderDetails />} />
           </Route>
 
           {/* Template Children routes */}

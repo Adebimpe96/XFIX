@@ -1,12 +1,40 @@
 import { Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import ArtisanCard from "./ArtisanCard";
 
 const Location = () => {
+
+  const artisans =[
+    {
+      rating: '4.5/5',
+      name: 'John Bryan',
+      category: 'Car Repair',
+      location: 'Oshodi-Apapa',
+    }, 
+    {
+      rating: '5/5',
+      name: 'Elvis Jack',
+      category: 'Electrical',
+      location: 'Akoka,Yaba',
+    },
+    {
+      rating: '4.7/5',
+      name: 'Amber Dan',
+      category: 'Plumbing',
+      location: 'Ikeja, Lagos',
+    },
+    {
+      rating: '4.8/5',
+      name: 'Eban Orji',
+      category: 'Delivery',
+      location: 'Anywhere in Lagos',
+    },
+  ]
   return (
     <>
-      <div className="text-white darkBlue py-3">
-        <div className="container flex flex-row text-white">
-          <h4>New Order</h4>
+      <div className="text-white bg-darkBlue py-3">
+        <div className="flex flex-row text-white mx-5">
+          <h4 className="font-medium text-lg">New Order</h4>
         </div>
       </div>
       <div className="container flex flex-row text- py-3">
@@ -34,33 +62,21 @@ const Location = () => {
               <MdOutlineKeyboardArrowDown color="darkBlue" fontSize="1.8em" />
             </div>
             <ul
-              class="container dropdown-menu backdrop-blur-xl bg-white/30 max-h-48 overflow-auto"
+              class="container dropdown-menu max-h-48 overflow-auto"
               aria-labelledby="dropdownMenuButton2"
             >
-              <li>
-                <Link className="dropdown-item " to="">
-                  <div className="container bg-slate-100 rounded-md">
-                    <div className="flex flex-row justify-between">
-                      <h4>#899499</h4>
-                      <p className="text-darkBlue font-medium">#10000</p>
-                    </div>
-                    <p>This is a text</p>
-                    <p>This is a text</p>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link className="dropdown-item" to="">
-                  <div className="container bg-slate-100 rounded-md">
-                    <div className="flex flex-row justify-between">
-                      <h4>#899499</h4>
-                      <p className="text-darkBlue font-medium">#10000</p>
-                    </div>
-                    <p>This is a text</p>
-                    <p>This is a text</p>
-                  </div>
-                </Link>
-              </li>
+             {
+              artisans.map((artisan) => {
+                return (
+                  <ArtisanCard
+                  rating={artisan.rating}
+                  name={artisan.name}
+                  category={artisan.category}
+                  location={artisan.location}
+                  />
+                )
+              })
+             }
             </ul>
           </div>
         </label>
@@ -69,13 +85,13 @@ const Location = () => {
             to="/neworder"
             className="flex flex-row text-decoration-none w-1/3"
           >
-            <button className="blue-btn text-sm">Back</button>
+            <button className="bg-darkBlue text-sm">Back</button>
           </Link>
           <Link
             to="/orderform"
             className="flex flex-row text-decoration-none w-1/3"
           >
-            <button className="blue-btn text-sm">Next</button>
+            <button className="bg-darkBlue text-sm">Next</button>
           </Link>
         </div>
       </form>

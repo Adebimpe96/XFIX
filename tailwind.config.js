@@ -10,7 +10,9 @@ module.exports = {
         'solidBlue': '#001970',
         'solidRed' : '#BB0404',
         'xfixYellow': '#FFCE31',
-
+      },
+      backgroundImage: {
+        'formBg' : "url('/src/components/Assets/image/delivery.jpg')",
       }
     },
   },
