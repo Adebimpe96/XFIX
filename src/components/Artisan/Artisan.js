@@ -14,7 +14,7 @@ const Artisan = () =>{
             <div className='flex flex-row space-x-16'>
             <ArtisanSideBar />
 
-        <div className='relative'>
+        <div className='relative -right-48'>
         <div className='grid grid-cols-3 '>
             <div className='container col-span-2 relative backdrop-blur-sm bg-white/30 rounded-md p-5 my-6'>
                 <div className='flex flex-col justify-start text-white my-3'>

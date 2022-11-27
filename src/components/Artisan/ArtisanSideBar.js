@@ -9,7 +9,7 @@ import appointment from '../Assets/icon/appoint.png';
 const ArtisanSideBar =() =>{
 
     return (
-        <div className="sidebar bg-white max-h-full">
+        <div className="sidebar fixed  bg-white max-h-96 py-5">
             <div className='px-10 py-5'>
                 <img src={xfix} alt='' />
             </div>
@@ -40,7 +40,7 @@ const ArtisanSideBar =() =>{
             <p className='font-semibold'>FAQs</p>
             </div>
             </div>
-            <div className='inline-flex red px-8 space-x-5 font-semibold'>
+            <div className='inline-flex red px-10 bg-white space-x-10 font-semibold py-5'>
                 <AiOutlinePoweroff fontSize='1.5em' className='my-auto'/>
                 <p className=''>Logout</p>
             </div>

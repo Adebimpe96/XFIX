@@ -13,7 +13,7 @@ import Sidebar from "./components/Layouts/Sidebar";
 import Template from "./components/Layouts/Template";
 
 //pages
-import CustDashboard from "./pages/CustDashboard";
+import CustomerDashBoard from "./pages/CustomerDashBoard";
 import ArtDashboard from "./pages/ArtDashboard";
 import ArtisanSignUp from "./components/Authentication/ArtisanSignUp";
 import Dashboard from "./components/Layouts/Dashboard/Dashboard";
@@ -28,6 +28,11 @@ import HistoryPage from "./components/Customers/HistoryPage";
 import CustomerSupport from "./components/Customers/CustomerSupport";
 import Artisan from "./components/Artisan/Artisan";
 import Header from "./components/Customers/Header";
+import NewOrder from "./components/Customers/NewOrder";
+import CustomerSideBar from "./components/Customers/CustomerSideBar";
+import CustomerTemplate from "./components/Customers/CustomerTemplate";
+import Location from "./components/Customers/Location";
+import OrderForm from "./components/Customers/OrderForm";
 function App() {
   return (
     <div>
@@ -43,7 +48,7 @@ function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="artsignup" element={<ArtisanSignUp />} />
           <Route path="navbar" element={<Navbar />} />
-          <Route path="custdashboard" element={<CustDashboard />} />
+          <Route path="custdashboard" element={<CustomerDashBoard />} />
           <Route path="artdashboard" element={<ArtDashboard />} />
           <Route path="artappointment" element={<Artisan />} />
           <Route path="sidebar" element={<Sidebar />} />
@@ -52,8 +57,16 @@ function App() {
           <Route path="header" element={<Header />} />
           <Route path="template" element={<Template />} />
 
+        {/*Customer Side bar children routes */}
+        <Route element={<CustomerTemplate />}>
+        <Route path="neworder" element={<NewOrder />} />
+        <Route path="location" element={<Location />} />
+        <Route path='orderform' element={<OrderForm />} />
+        </Route>
+
           {/* Template Children routes */}
           <Route element={<Template />}>
+          
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/jobs" element={<Jobs />}>
               <Route path="/jobs/jobsdetails/:id" />
