@@ -39,7 +39,6 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="body" element={<Body />} />
-          {/* <Route path="custsupport" element={<CustomerSupport />} /> */}
           <Route path="custlogin" element={<CustLogin />} />
           <Route path="artlogin" element={<ArtLogin />} />
           <Route path="signup" element={<SignUp />} />
