@@ -61,7 +61,7 @@ const Modal = ({ onClick }) => {
 
 function ArtLogin() {
   document.title = `XFix-Login`;
-
+  const [error, setError] = useState("");
   const {
     register,
     handleSubmit,
@@ -70,6 +70,7 @@ function ArtLogin() {
 
   const onSubmit = (data) => {
     console.log(data);
+    setError("Invalid login details");
   };
 
   const [showForgot, setShowForgot] = useState(false);
