@@ -4,9 +4,9 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 const Location = () => {
   return (
     <>
-      <div className="text-white darkBlue py-3">
-        <div className="container flex flex-row text-white">
-          <h4>New Order</h4>
+      <div className="text-white bg-darkBlue py-3">
+        <div className="flex flex-row text-white mx-5">
+          <h4 className="font-medium text-lg">New Order</h4>
         </div>
       </div>
       <div className="container flex flex-row text- py-3">
@@ -69,13 +69,13 @@ const Location = () => {
             to="/neworder"
             className="flex flex-row text-decoration-none w-1/3"
           >
-            <button className="blue-btn text-sm">Back</button>
+            <button className="bg-darkBlue text-sm">Back</button>
           </Link>
           <Link
             to="/orderform"
             className="flex flex-row text-decoration-none w-1/3"
           >
-            <button className="blue-btn text-sm">Next</button>
+            <button className="bg-darkBlue text-sm">Next</button>
           </Link>
         </div>
       </form>
