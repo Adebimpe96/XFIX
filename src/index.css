@@ -176,3 +176,17 @@ form button:hover {
 .c-form{
   height: 400px;
 }
+
+.invalid-data {
+  color: red;
+}
+
+.con-img {
+  width: 100px;
+}
+
+.con-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

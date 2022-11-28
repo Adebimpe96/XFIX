@@ -13,7 +13,7 @@ const OrderForm = () => {
           <h5 className="text-darkBlue font-semibold text-2xl py-3">
             Please fill in your details correctly
           </h5>
-          <label class="block my-2 text-sm">
+          {/* <label class="block my-2 text-sm">
             <span class="block text-sm font-medium text-darkBlue">
               Full name
             </span>
@@ -22,7 +22,7 @@ const OrderForm = () => {
               className="text-sm "
               placeholder="Richard Fred"
             />
-          </label>
+          </label> */}
           <label class="block my-2 text-sm">
             <span class="block text-sm font-medium text-darkBlue">
               Home address
@@ -45,15 +45,12 @@ const OrderForm = () => {
           </label>
           <label class="block my-2 text-sm">
             <span class="block text-sm font-medium text-darkBlue">
-              Description
-            </span>
-            <span class="block text-sm font-medium text-slate-400 py-2">
-              Maximum 200 characters
+              Description of job
             </span>
             <textarea
               rows={6}
               className="outline-none border w-4/5 rounded-md p-1"
-              placeholder="Enter text here..."
+              placeholder="Enter your details"
             ></textarea>
           </label>
 

@@ -1,121 +1,162 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
+import authService from "../../services/authService";
+import {
+  vendorFormData,
+  vendorFormDataValidate,
+} from "../schemas/registerVendorSchema";
 
 function Artsignup() {
-  const { register, handleSubmit } = useForm({
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      location: "",
-      expertise: "",
-    },
+  const navigate = useNavigate();
+  function onSubmit(values) {
+    console.log("values of form", JSON.stringify(values, null, 2));
+    authService.registerVendor(values).then(
+      () => navigate({ pathname: "/artlogin" }),
+      (err) => console.log("there is an error", err)
+    );
+  }
+
+  const vendorForm = useFormik({
+    initialValues: vendorFormData,
+    validationSchema: vendorFormDataValidate,
+    onSubmit,
   });
+
   return (
     <div>
       <div className="block">
         <h2 className="text-blue-800">Welcome to Xfix!</h2>
         <p className="text-sky-500 mt-2">Create an account with xfix.</p>
-        <form
-          action=""
-          method="post"
-          className=""
-          onSubmit={handleSubmit(console.log)}
-        >
-          <label htmlFor="name" className="">
-            First Name
-          </label>
-          <input
-            type="text"
-            name="lname"
-            id="lname"
-            className="form-input"
-            {...register("firstName", { required: true })}
-          />
-          <label htmlFor="name" className="">
-            Last Name
-          </label>
-          <input
-            type="text"
-            name="lname"
-            id="lname"
-            className="form-input"
-            {...register("lastName", { required: true })}
-          />
-          <label htmlFor="name" className="">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className="form-input"
-            {...register("email", { required: true })}
-          />
-          <label htmlFor="password" className="">
-            Password
-          </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            className="form-input"
-            {...register("password", { required: true })}
-          />
-          <label htmlFor="password" className="">
-            Confirm password
-          </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            className="form-input"
-            {...register("password", { required: true })}
-          />{" "}
-          <label htmlFor="city">Location</label>
-          <select
-            id="city"
-            name="city"
-            className="select-form"
-            {...register("location")}
-          >
-            <option value={""} className="hidden">
-              Choose your area
-            </option>
-            <option value="ikeja">Ikeja</option>
-            <option value="Yaba">Yaba</option>
-            <option value="victoria island">Victoria Island</option>
-            <option value="oshodi">Oshodi</option>
-            <option value="mushin">Mushin</option>
-            <option value="ikorodu">Ikorodu</option>
-            <option value="ogba">Ogba</option>
-            <option value="surulere">Surulere</option>
-            <option value="agege">Agege</option>
-            <option value="ikotun">Ikotun</option>
-            <option value="festac">Festac</option>
-            <option value="iyanaipaja">Iyana Ipaja</option>
-            <option value="lekki/ikoyi">Lekki/Ikoyi</option>
-            <option value="ajah">Ajah</option> <br />
-          </select>
-          <label htmlFor="jobtype">Expertise</label>
-          <select
-            id="jobtype"
-            name="jobtype"
-            className="select-form"
-            {...register("expertise")}
-          >
-            <option value={""} className="hidden">
-              Choose your specialization
-            </option>
-            <option value="electrician">Electrician</option>
-            <option value="plumber">Plumber</option>
-            <option value="carpenter">Carpenter</option>
-            <option value="painter">Painter</option>
-            <option value="Dispatcher">Dispatcher</option>
-            <option value="car repairer">Car repairer</option>
-          </select>
+        <form onSubmit={vendorForm.handleSubmit}>
+          <div>
+            <label>First Name</label>
+            <input
+              type="text"
+              className="form-input"
+              name="firstName"
+              value={vendorForm.values.firstName}
+              onChange={vendorForm.handleChange}
+            />
+
+            <p className="invalid-data">
+              {vendorForm.errors.firstName && vendorForm.touched.firstName
+                ? vendorForm.errors.firstName
+                : null}
+            </p>
+          </div>
+          <div>
+            <label>Last Name</label>
+            <input
+              type="text"
+              className="form-input"
+              name="lastName"
+              value={vendorForm.values.lastName}
+              onChange={vendorForm.handleChange}
+            />
+
+            <p className="invalid-data">
+              {vendorForm.errors.lastName && vendorForm.touched.lastName
+                ? vendorForm.errors.lastName
+                : null}
+            </p>
+          </div>
+          <div>
+            <label>Email</label>
+            <input
+              type="email"
+              id="email"
+              className="form-input"
+              name="email"
+              value={vendorForm.values.email}
+              onChange={vendorForm.handleChange}
+            />
+
+            <p className="invalid-data">
+              {vendorForm.errors.email && vendorForm.touched.email
+                ? vendorForm.errors.email
+                : null}
+            </p>
+          </div>
+          <div>
+            <label>Password</label>
+            <input
+              type="password"
+              id="password"
+              className="form-input"
+              name="password"
+              value={vendorForm.values.password}
+              onChange={vendorForm.handleChange}
+            />
+
+            <p className="invalid-data">
+              {vendorForm.errors.password && vendorForm.touched.password
+                ? vendorForm.errors.password
+                : null}
+            </p>
+          </div>
+
+          <div>
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              className="form-input"
+              name="confirmPassword"
+              value={vendorForm.values.confirmPassword}
+              onChange={vendorForm.handleChange}
+            />
+            <p className="invalid-data">
+              {vendorForm.errors.confirmPassword &&
+              vendorForm.touched.confirmPassword
+                ? vendorForm.errors.confirmPassword
+                : null}
+            </p>
+          </div>
+
+          <div>
+            <label>Location</label>
+            <input
+              type="text"
+              id="location"
+              className="form-input"
+              name="location"
+              value={vendorForm.values.location}
+              onChange={vendorForm.handleChange}
+            />
+
+            <p className="invalid-data">
+              {vendorForm.errors.location && vendorForm.touched.location
+                ? vendorForm.errors.location
+                : null}
+            </p>
+          </div>
+
+          <div>
+            <label>Expertise</label>
+            <select
+              id="jobtype"
+              className="select-form"
+              name="expertise"
+              value={vendorForm.values.expertise}
+              onChange={vendorForm.handleChange}
+            >
+              <option defaultValue="" className="hidden">
+                Choose your specialization
+              </option>
+              <option value="electrician">Electrician</option>
+              <option value="plumber">Plumber</option>
+              <option value="carpenter">Carpenter</option>
+              <option value="painter">Painter</option>
+              <option value="Dispatcher">Dispatcher</option>
+              <option value="car repairer">Car repairer</option>
+            </select>
+
+            <p className="invalid-data">
+              {vendorForm.errors.expertise && vendorForm.touched.expertise
+                ? vendorForm.errors.expertise
+                : null}
+            </p>
+          </div>
+
           <button
             type="submit"
             className="bg-blue-700 text-white hover:rounded-tr-2lg mt-6 hover:bg-red-600 hover:text-white active:bg-sky-400"

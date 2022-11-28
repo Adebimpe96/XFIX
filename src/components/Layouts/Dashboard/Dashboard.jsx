@@ -45,15 +45,15 @@ function Dashboard({ user }) {
     },
   ];
   return (
-    <div className="dashboard">
+    <div className="dashboards">
       <div className="notification flex justify-end items-center">
         <div className="username-display">
           <h3 className="font-bold text-xl text-blue-900">
             Hello, {user?.email}
           </h3>
         </div>
-        <i class="fa-regular fa-bell text-2xl text-slate-400 mt-4"></i>
-        <img src={avatar} alt="" className="ml-3 avatar mt-4" />
+        <i className="fa-regular fa-bell text-2xl text-slate-400 mt-4"></i>
+        {/* <img src={avatar} alt="" className="ml-3 avatar mt-4" /> */}
       </div>
 
       <div className="sub-container flex justify-between items-center">
@@ -63,26 +63,26 @@ function Dashboard({ user }) {
           </div>
           <div className="cards flex justify-between items-center">
             <div className="card-content">
-              {requests.map((requests) => (
+              {requests.map((requests, key) => (
                 <div
-                  key={requests.id}
+                  key={key}
                   className="card mt-6 rounded-2xl flex justify-center"
                 >
                   <div>
-                    <img
+                    {/* <img
                       src={requests.image}
                       alt={requests.name}
                       className="request-img"
-                    />
+                    /> */}
                   </div>
                   <div className="request-details m-4 ">
                     <p className="text-2xl r_name font-bold">{requests.name}</p>
                     <p>{requests.address}</p>
                   </div>
-                  <div>
+                  {/* <div>
                     {" "}
                     <img src={decorate} alt="decorate" className="decorate" />
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>

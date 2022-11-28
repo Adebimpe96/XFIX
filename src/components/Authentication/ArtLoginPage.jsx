@@ -62,6 +62,7 @@ const Modal = ({ onClick }) => {
 function ArtLogin() {
   document.title = `XFix-Login`;
   const [error, setError] = useState("");
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -69,8 +70,13 @@ function ArtLogin() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
-    setError("Invalid login details");
+    if (data.email === "user@gmail.com" && data.password === "1234") {
+      localStorage.setItem("authenticated", true);
+      alert("Login Successfully");
+      navigate("/dashboard");
+    } else {
+      setError("Invalid login details");
+    }
   };
 
   const [showForgot, setShowForgot] = useState(false);

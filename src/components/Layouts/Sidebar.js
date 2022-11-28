@@ -67,7 +67,7 @@ function Sidebar() {
           <i class="fa-solid fa-power-off text-red-700"></i>
           <NavLink
             className="ml-3 text-blue-900"
-            to="/logout"
+            to="/artlogin"
             onClick={handleLogout}
           >
             Logout

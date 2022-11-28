@@ -3,15 +3,18 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="navbar w-full h-20 px-5 flex justify-between shadow-transparent">
-      <img src={logo} alt="logo" className="w-40 h-30 object-cover" />
+    <div className="navbar w-full px-3 flex justify-between shadow-transparent">
+      <div className="con-img">
+        <img src={logo} alt="logo" className="w-40 h-30 object-cover" />
+      </div>
       <div className="link w-1/3 flex">
         <ul className="w-full flex justify-between items-center text-blue-900">
           <Link to="/signup" className="button_pry1">
             Get started{" "}
           </Link>
-          <Link to="/login">Login </Link>
-          <Link to="#service">Services </Link>
+          <Link to="/custlogin">Login </Link>
+          <i></i>
+          <i></i>
         </ul>
       </div>
     </div>

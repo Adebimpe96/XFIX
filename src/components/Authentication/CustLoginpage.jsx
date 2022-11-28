@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import authService from "../../services/authService";
+import service from "../../services/services";
 
 const Modal = ({ onClick }) => {
   return (
@@ -68,17 +70,20 @@ function CustLoginpage() {
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
-
   const [error, setError] = useState("");
-  const onSubmit = (data) => {
-    if (data.email === "user@gmail.com" && data.password === "1234") {
-      localStorage.setItem("authenticated", true);
-      navigate("/dashboard");
-    } else {
-      setError("Invalid login details");
-    }
-  };
 
+  const submit = (data) => {
+    authService.login(data).then(
+      (res) => {
+        service.setToken(res.token);
+        navigate("/custdashboard");
+      },
+      (err) => {
+        console.log(err);
+        setError("Invalid login details");
+      }
+    );
+  };
   const [showForgot, setShowForgot] = useState(false);
   return (
     <>
@@ -88,7 +93,7 @@ function CustLoginpage() {
             <h3 className="text-blue-800">Welcome back!</h3>
             <p className="text-sky-500">Sign in to continue</p>
             <p style={{ color: "red", fontSize: "1.2rem" }}>{error}</p>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(submit)}>
               <label> Email</label> &nbsp;
               <input
                 type="email"

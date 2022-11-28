@@ -2,10 +2,10 @@ import { BsFacebook, BsTwitter } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import insta from "../Assets/icon/insta.png";
 
-const CustomerSupport = () => {
+function CustomerSupport() {
   return (
-    <div className="">
-      <div className="support flex justify-between items-center">
+    <div>
+      <div className="support- flex justify-between items-center">
         <h4 className="text-white text-2xl p-5 font-bold">Support</h4>
       </div>
       <div className="container-lg flex flex-col md:flex-row justify-around py-4">
@@ -27,8 +27,8 @@ const CustomerSupport = () => {
             Send Us a Message
           </h4>
           <form className="">
-            <label class="block my-2 text-xs">
-              <span class="block text-xs font-medium text-slate-700">
+            <label className="block my-2 text-xs">
+              <span className="block text-xs font-medium text-slate-700">
                 Full name
               </span>
               <input
@@ -36,8 +36,8 @@ const CustomerSupport = () => {
                 className="text-xs w-full rounded-none border-darkBlue"
               />
             </label>
-            <label class="block my-2 text-xs">
-              <span class="block text-xs font-medium text-slate-700">
+            <label className="block my-2 text-xs">
+              <span className="block text-xs font-medium text-slate-700">
                 Email address
               </span>
               <input
@@ -45,8 +45,8 @@ const CustomerSupport = () => {
                 className="text-xs w-full rounded-none border-darkBlue"
               />
             </label>
-            <label class="block my-2 text-xs">
-              <span class="block text-xs font-medium text-slate-700">
+            <label className="block my-2 text-xs">
+              <span className="block text-xs font-medium text-slate-700">
                 Message
               </span>
               <textarea
@@ -86,6 +86,6 @@ const CustomerSupport = () => {
       </div>
     </div>
   );
-};
+}
 
 export default CustomerSupport;

@@ -7,18 +7,17 @@ import { Link } from "react-router-dom";
 import RecentOrder from "./RecentOrder";
 
 const Dashboard = () => {
-
-  const recent= [
+  const recent = [
     {
-      category: 'Electrical'
+      category: "Electrical",
     },
     {
-      category: 'Plumbing'
+      category: "Plumbing",
     },
     {
-      category: 'Delivery'
-    }
-  ]
+      category: "Delivery",
+    },
+  ];
   return (
     <>
       <div className="text-white darkBlue py-3">
@@ -38,7 +37,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div class="dropdown">
+      <div className="dropdown">
         <div
           id="dropdownMenuButton2"
           className="container my-5 py-5 rounded-md flex flex-row shadow-md drop-shadow-lg font-semibold justify-between "
@@ -51,20 +50,14 @@ const Dashboard = () => {
           <MdOutlineKeyboardArrowDown color="darkBlue" fontSize="1.8em" />
         </div>
         <ul
-          class="container dropdown-menu backdrop-blur-xl bg-white/30 max-h-48 overflow-auto"
-          aria-labelledby="dropdownMenuButton2">
-            {
-              recent.map((order)=> {
-                return(
-                  <RecentOrder
-                  category ={order.category}
-                  />
-                )
-              }
-            
-              )
-            }
-        
+          className="container dropdown-menu backdrop-blur-xl bg-white/30 max-h-48 overflow-auto"
+          aria-labelledby="dropdownMenuButton2"
+        >
+          {recent.map((order, key) => (
+            <div key={key}>
+              <RecentOrder category={order.category} />
+            </div>
+          ))}
         </ul>
       </div>
 

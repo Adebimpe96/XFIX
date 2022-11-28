@@ -37,7 +37,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route index element={<LandingPage />} />
           <Route path="body" element={<Body />} />
           <Route path="custsupport" element={<CustomerSupport />} />
           <Route path="custlogin" element={<CustLogin />} />
