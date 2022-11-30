@@ -6,7 +6,7 @@ import {
 import { Link } from "react-router-dom";
 import RecentOrder from "./RecentOrder";
 
-const Dashboard = () => {
+const CustomerDashboard = () => {
   const recent = [
     {
       category: "Electrical",
@@ -29,7 +29,9 @@ const Dashboard = () => {
         </Link>
         <div className="container flex flex-row justify-between">
           <div className="text-start">
-            <h4 className="mb-2 text-2xl font-thin">Welcome, Username</h4>
+            <h4 className="mb-2 text-2xl text-lightBlue font-thin">
+              Welcome, dear customer!
+            </h4>
           </div>
           <div className="text-end">
             <MdOutlinePersonOutline fontSize="1.7em" />
@@ -73,4 +75,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default CustomerDashboard;

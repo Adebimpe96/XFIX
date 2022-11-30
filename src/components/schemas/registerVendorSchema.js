@@ -12,7 +12,7 @@ const vendorFormData = {
 
 const vendorFormDataValidate = Yup.object().shape({
   firstName: Yup.string()
-    .matches(/^[a-zA-Z]+$/, "Invalid firstname")
+    // .matches(/^[a-zA-Z]+$/, "Invalid firstname")
     .required("First name is required"),
   lastName: Yup.string()
     .matches(/^[a-zA-Z]+$/, "Invalid lastname")

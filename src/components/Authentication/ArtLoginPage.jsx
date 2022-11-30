@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import authService from "../../services/authService";
+import service from "../../services/services";
 
 const Modal = ({ onClick }) => {
   return (
@@ -59,7 +61,7 @@ const Modal = ({ onClick }) => {
   );
 };
 
-function ArtLogin() {
+function ArtLoginPage() {
   document.title = `XFix-Login`;
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -69,14 +71,19 @@ function ArtLogin() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    if (data.email === "user@gmail.com" && data.password === "1234") {
-      localStorage.setItem("authenticated", true);
-      alert("Login Successfully");
-      navigate("/dashboard");
-    } else {
-      setError("Invalid login details");
-    }
+  const submit = (data) => {
+    authService.login(data).then(
+      (res) => {
+        console.log(res);
+        service.setToken(res.token);
+        alert("Login successfully");
+        navigate("/dashboard");
+      },
+      (err) => {
+        console.log(err);
+        setError("Invalid login details");
+      }
+    );
   };
 
   const [showForgot, setShowForgot] = useState(false);
@@ -88,7 +95,7 @@ function ArtLogin() {
             <h3 className="text-blue-800">Welcome back!</h3>
             <p className="text-sky-500">Sign in to continue</p>
             <p style={{ color: "red", fontSize: "1.2rem" }}>{error}</p>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(submit)}>
               <label> Email</label> &nbsp;
               <input
                 type="email"
@@ -116,7 +123,7 @@ function ArtLogin() {
               </p>
               <button
                 type={"submit"}
-                className="signin-button active:bg-sky-300 hover:bg-red-700 text-white bg-blue-600"
+                className="signin-btn active:bg-sky-300 hover:bg-red-700 text-white bg-blue-700"
                 onSubmit={handleSubmit()}
               >
                 Sign in
@@ -134,4 +141,4 @@ function ArtLogin() {
     </>
   );
 }
-export default ArtLogin;
+export default ArtLoginPage;

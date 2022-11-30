@@ -76,6 +76,7 @@ function CustLoginpage() {
     authService.login(data).then(
       (res) => {
         service.setToken(res.token);
+        alert("Login successfully");
         navigate("/custdashboard");
       },
       (err) => {

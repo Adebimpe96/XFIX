@@ -4,7 +4,7 @@ import "../Support/support.css";
 function Support() {
   return (
     <div className="">
-      <div className="support flex justify-around items-center">
+      <div className="supports flex justify-around items-center">
         <div className="support-content w-1/2  border-2">
           <h3 className="">Support</h3>
           <h4>Ask the administrator</h4>

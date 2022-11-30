@@ -17,12 +17,6 @@ function Dashboard({ user }) {
       name: "Tosin",
       address: "8, Palm Avenue, Mushin.",
     },
-    {
-      id: 3,
-      image: avatar1,
-      name: "Zaynab",
-      address: "1, Balogun street, Oshodi.",
-    },
   ];
   const appointments = [
     {
@@ -53,7 +47,6 @@ function Dashboard({ user }) {
           </h3>
         </div>
         <i className="fa-regular fa-bell text-2xl text-slate-400 mt-4"></i>
-        {/* <img src={avatar} alt="" className="ml-3 avatar mt-4" /> */}
       </div>
 
       <div className="sub-container flex justify-between items-center">

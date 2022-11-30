@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { useState } from "react";
+import { useState } from "react";
 
 // Authentication
 import SignUp from "./components/Authentication/SignUp";
@@ -12,7 +12,6 @@ import Template from "./components/Layouts/Template";
 
 //pages
 import CustomerDashBoard from "./pages/CustomerDashBoard";
-import ArtDashboard from "./pages/ArtDashboard";
 import Navbar from "./components/Layouts/Navbar";
 import LandingPage from "./pages/LandingPage";
 import Error from "./components/Error";
@@ -32,25 +31,27 @@ import OrderForm from "./components/Customers/OrderForm";
 import CustLogin from "./components/Authentication/CustLogin";
 import OrderDetails from "./components/Customers/OrderDetails";
 import OrderStatus from "./components/Customers/OrderStatus";
+import ArtProfile from "./components/Authentication/Profile/ArtProfile";
 function App() {
+  // const [user, setUser] = useState(null);
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route index element={<LandingPage />} />
           <Route path="body" element={<Body />} />
-          <Route path="custsupport" element={<CustomerSupport />} />
           <Route path="custlogin" element={<CustLogin />} />
           <Route path="artlogin" element={<ArtLogin />} />
           <Route path="signup" element={<SignUp />} />
           <Route path="artsignup" element={<ArtisanSignUp />} />
           <Route path="navbar" element={<Navbar />} />
-          <Route path="artdashboard" element={<ArtDashboard />} />
           <Route path="sidebar" element={<Sidebar />} />
           <Route path="*" element={<Error />} />
           <Route path="bodies" element={<Bodies />} />
           <Route path="header" element={<Header />} />
           <Route path="orderstatus" element={<OrderStatus />} />
+          <Route path="updateprofile" element={<ArtProfile />} />
+
           {/*Customer Side bar children routes */}
           <Route element={<CustomerTemplate />}>
             <Route path="custdashboard" element={<CustomerDashBoard />} />
@@ -67,7 +68,6 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/appointment" element={<Appointment />} />
-
             <Route path="/support" element={<Support />} />
             <Route path="/history" element={<History />} />
           </Route>

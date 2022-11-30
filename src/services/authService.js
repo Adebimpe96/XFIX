@@ -14,6 +14,10 @@ const authService = {
     const res = await axios.post(_routes.login, postBody);
     return res.data;
   },
+  serviceBooking: async (postBody) => {
+    const res = await axios.post(_routes.serviceBooking, postBody);
+    return res.data;
+  },
 };
 
 export default authService;

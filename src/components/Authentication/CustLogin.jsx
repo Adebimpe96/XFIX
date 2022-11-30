@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "../Authentication/side.css";
-import Login from "./CustLoginpage";
-
+import CustLoginpage from "./CustLoginpage";
 const CustLogin = () => {
   return (
     <div>
@@ -23,7 +22,7 @@ const CustLogin = () => {
         </div>
         <div className="right">
           <div className="right-content">
-            <Login />
+            <CustLoginpage />
           </div>
         </div>
       </div>

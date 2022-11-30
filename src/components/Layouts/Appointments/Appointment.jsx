@@ -1,7 +1,6 @@
 import "../Appointments/artisan.css";
 import { BiTrendingUp } from "react-icons/bi";
 import artisan from "../../Assets/image/jobber.png";
-// import Calendar from "../Appointments/Calendar";
 
 const Appointment = () => {
   return (
@@ -34,12 +33,12 @@ const Appointment = () => {
                     <BiTrendingUp className="ml-2 my-auto" />
                   </p>
                 </div>
-                <img
+                {/* <img
                   src={artisan}
                   alt=""
                   width={240}
                   className="absolute -right-16 -top-4"
-                />
+                /> */}
               </div>
             </div>
           </div>

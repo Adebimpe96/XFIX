@@ -15,8 +15,12 @@ const Signups = () => {
     console.log(JSON.stringify(values, null, 2));
 
     authService.registerCustomer(values).then(
-      () => navigate({ pathname: "/custdashboard" }),
-      (err) => setMsg("Email is in use")
+      () => navigate({ pathname: "/custlogin" }),
+      alert("Registered successfully"),
+      (err) => {
+        console.log(err);
+        setMsg("Email is in use");
+      }
     );
   }
 

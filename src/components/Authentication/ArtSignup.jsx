@@ -12,6 +12,7 @@ function Artsignup() {
     console.log("values of form", JSON.stringify(values, null, 2));
     authService.registerVendor(values).then(
       () => navigate({ pathname: "/artlogin" }),
+      alert("Registered successfully"),
       (err) => console.log("there is an error", err)
     );
   }

@@ -42,8 +42,7 @@ const OrderDetails = () => {
           </div>
           <div>
             <p className="text-sm py-1 pr-1">
-              Gradients fade out to transparent by default, without requiring
-              you.
+              I need to fix a disconnected wire in my house.
             </p>
           </div>
         </div>
@@ -58,7 +57,7 @@ const OrderDetails = () => {
             </Link>
           </div>
           <div>
-            <p className="text-sm py-1 pr-1">2134 Oshodi-Isolo, Lagos</p>
+            <p className="text-sm py-1 pr-1">10, Ikija street, Lagos</p>
           </div>
         </div>
       </div>

@@ -12,7 +12,9 @@ function Navbar() {
           <Link to="/signup" className="button_pry1">
             Get started{" "}
           </Link>
-          <Link to="/custlogin">Login </Link>
+          <Link to="/custlogin" className=" font-extrabold text-2xl">
+            Login{" "}
+          </Link>
           <i></i>
           <i></i>
         </ul>
